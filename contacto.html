@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="icon" href="img/favicon.ico" type="image/ico">
-    <script src="https://kit.fontawesome.com/3a6a7a1eda.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index,follow">
+        <meta name="description" content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
+        <meta name="keywords" content="Celulares, Accesorios, Iphone, Xiaomi">
+        <meta name="author" content="Cristian Gomez">
+        <meta name="copyright" content="Cristian Gomez">
+        <title>CeBra Phone - Contacto</title>
+        <link rel="icon" href="img/favicon.ico" type="image/ico">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
 <header>
     <nav style="text-align: center; background-color: rgb(140, 150, 250);">
@@ -20,13 +25,13 @@
     <br>
     <div align="center">
         <table border="1">
-            <th bgcolor="grreeee">
+            <th style="background-color: greenyellow;">
                 <a href="#llenar-formulario">Formulario de Contacto</a>
             </th>
-            <th bgcolor="grreeee">
+            <th style="background-color: palevioletred;">
                 <a href="#enviar-correo">Enviar un Correo</a>
             </th>
-            <th bgcolor="grreeee">
+            <th style="background-color: olivedrab;">
                 <a href="#redes">Redes Sociales</a>
             </th>
         </table>
@@ -39,8 +44,8 @@
     </div>
 </header>
 
-<body style="background-color: grey;">
-    <h1 align="center">Contacto:</h1>
+<body style="background-color: goldenrod" align="center">
+    <h1>Contacto:</h1>
     <br> <!--Salto de linea-->
     <br> <!--Salto de linea-->
     <br> <!--Salto de linea-->
@@ -66,22 +71,22 @@
     <br> <!--Salto de linea-->
     <br> <!--Salto de linea-->
     <br> <!--Salto de linea-->
-    <div align="center">
+    <div style="background-color: greenyellow;">
         <h2 id="llenar-formulario">Llenar formulario de contacto:</h2>
         <form action="/show_data.html">
-            <b>Nombre: </b><input type="text" name="nombre">
+            <b>Nombre: </b><input type="text" name="nombre" placeholder="Ingrese su nombre aquí...">
             <br> <!--Salto de linea-->
-            <b>Apellido: </b><input type="text" name="apellido">
+            <b>Apellido: </b><input type="text" name="apellido" placeholder="Ingrese su apellido aquí...">
             <br> <!--Salto de linea-->
-            <b>Correo: </b><input type="email" name="correo">
+            <b>Correo: </b><input type="email" name="correo" placeholder="Ingrese su correo aquí...">
             <br><br> <!--Salto de linea-->
             <br><label for="motivo"><b>Motivo: </b></label>
             <br>
-            <input type="text" name="motivo" id="motivo">
+            <input type="text" name="motivo" id="motivo" placeholder="Ingrese su título aquí...">
             <br><br> <!--Salto de linea-->
-            <label for="comentarios"><b>Mensaje:</b> </label>
+            <label for="mensaje"><b>Mensaje:</b> </label>
             <br> <!--Salto de linea-->
-            <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje aquí..."></textarea>
             <br> <!--Salto de linea-->
             <br>
             <input type="submit" value="Enviar">
@@ -110,69 +115,38 @@
         <br> <!--Salto de linea-->
         <br> <!--Salto de linea-->
         <br> <!--Salto de linea-->
-
-        <h2 id="enviar-correo">Enviar un correo eléctronico:</h2>
-        <p>Dejános un correo: </p> <!-- Que en 2 casillas pueda poner tema y comentarios y envie con un botón enviar desde el navegador. -->
-        <a href="mailto:svpr0@hotmail.com?subject=Titulo de prueba!&body=Esto es el contenido de prueba!">ENVIAR MAIL</a>
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <h2 id="redes">Redes Sociales:</h2>
-        <nav>
+        <div style="background-color: palevioletred;">
             <br>
-            <a href="https://www.facebook.com/chukigomez"><i class="fa-brands fa-facebook fa-5x"></i></a>
-            <a href="https://www.twitter.com/Chukin95"><i class="fa-brands fa-twitter fa-5x"></i></a>
-            <a href="https://www.instagram.com/Chukig95"><i class="fa-brands fa-instagram fa-5x"></i></a>
-            <a href="https://www.linkedin.com/in/cristian-gomez-448218215/"><i class="fa-brands fa-linkedin fa-5x"></i></a>
-            <a href="https://www.github.com/Chukin95"><i class="fa-brands fa-github-alt fa-5x"></i></a>
-        </nav>
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
-        <br> <!--Salto de linea-->
+            <h2 id="enviar-correo">Enviar un correo eléctronico:</h2>
+            <a href="mailto:svpr0@hotmail.com?subject=Titulo de prueba!&body=Esto es el contenido de prueba!">ENVIAR MAIL</a>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div style="background-color: olive;">
+            <br>
+            <h2 id="redes">Redes Sociales:</h2>
+            <nav>
+                <br>
+                <a href="https://www.facebook.com/chukigomez" target="_blank"><img src="./img/iconos/facebook.png" alt="facebook" title="Facebook" height="400px"></a>
+                <br>
+                <a href="https://www.facebook.com/chukigomez" target="_blank"><img src="./img/iconos/youtube.png" alt="youtube" title="Youtube" height="350px"></a>
+                <br>
+                <a href="https://www.twitter.com/Chukin95" target="_blank"><img src="./img/iconos/twitter.png" alt="twitter" title="Twitter" height="300px"></a>
+                <br>
+                <a href="https://www.instagram.com/Chukig95" target="_blank"><img src="./img/iconos/instagram.png" alt="instagram" title="Instagram" height="250px"></a>
+                <br>
+                <a href="https://www.linkedin.com/in/cristian-gomez-448218215/" target="_blank"><img src="./img/iconos/linkedin.png" alt="linkedin" title="Linkedin" height="200px"></a>
+                <br>
+                <a href="https://www.github.com/Chukin95" target="_blank"><img src="./img/iconos/github.png" alt="github" title="Github" height="150px"></a>
+            </nav>
+        </div>
     </div>
 </body>
 
 <footer style="text-align: center; background-color: rgb(140, 150, 250);">
-    <nav>
-        <br>
-        <a href="https://www.facebook.com/chukigomez" target="_blank"><i class="fa-brands fa-facebook fa-3x"></i></a>
-        <a href="https://www.twitter.com/Chukin95" target="_blank"><i class="fa-brands fa-twitter fa-3x"></i></a>
-        <a href="https://www.instagram.com/Chukig95" target="_blank"><i class="fa-brands fa-instagram fa-3x"></i></a>
-        <a href="https://www.linkedin.com/in/cristian-gomez-448218215/" target="_blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
-        <a href="https://www.github.com/Chukin95" target="_blank"><i class="fa-brands fa-github-alt fa-3x"></i></a>
-    </nav>
     <br>
-    Copyright © 2022-2025 All Rights Reserved. By Cristian Gómez.
+    <p style="font-family: Courier;">Copyright © 2022-2025 All Rights Reserved. By Cristian Gómez.</p>
     <br><br>
 </footer>
 </html>
