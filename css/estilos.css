@@ -103,10 +103,11 @@ hr {
 .contenedor {
     /*display: inline-block;*/
     margin: 0 auto;
-    width: 90%;
+    margin-left: 5%;
 }
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 .producto {
     font-family: 'Lato', sans-serif;
@@ -115,6 +116,9 @@ hr {
     padding: 10px;
     border: 1px solid #333;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px #333;
+    width: 22%;
+    box-sizing: border-box;
 }
 .h2Producto {
     font-weight: bold;
@@ -129,17 +133,31 @@ hr {
     color: #202020;
 }
 .botonComprar {
+    display: block;
     font-family: 'Fredoka One', cursive;
     font-weight: 700;
     background: #43a09d;
     text-decoration: none;
+    border-radius: 5px;
+    color: #cecece;
     padding: 0.5% 10% 0.7% 10%;
+    margin-bottom: 10px;
 }
 .botonComprar:hover {
     background: #26f8f1;
 }
 .botonComprar:active {
     background: #00fff7;
+}
+@media (max-width: 1000px) {
+    .producto {
+        width: 45%;
+    }
+}
+@media (max-width: 550px) {
+    .producto {
+        width: 90%;
+    }
 }
 .barraDeNavegacion {
     background: #3fb6b2;
