@@ -1,15 +1,16 @@
 .Background {
     background-image: url(/img/background.jpg);
-    background-size: 1500px;
-    width: 1920px;
-    height: 1080px;
+    background-position: center top;
+    background-size: 100% auto;
     border: 2px solid;
     color: pink;
   }
+
 html {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Handlee', cursive;
     font-size: 13pt;
