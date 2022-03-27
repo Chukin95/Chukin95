@@ -35,8 +35,6 @@
                     menuElemento[i].classList.toggle('desaparece');
                 }
             }
-            var audio = document.getElementById("playAudio");
-            audio.volume = 0.2;
         </script>
 
         <main>
@@ -72,6 +70,10 @@
             <audio id="playAudio" controls autoplay loop>
                 <source src="./audio/selfcontrol.ogg" type="audio/ogg">
             </audio>
+            <script>
+                var audio = document.getElementById("playAudio");
+                audio.volume = 0.2;
+            </script>
             <br>
             <section class="padreColumnas">
                 <p class="columna">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sint! Deleniti quis, quod officia ad unde ea suscipit aut sint? In voluptatem accusamus ipsa ab similique vel fugit nihil possimus.
