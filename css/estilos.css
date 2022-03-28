@@ -26,7 +26,10 @@ h1 {
     margin: 0px -5px -10px -5px;
 }
 h2 {
-    color:#efefef;
+    color:#270202;
+}
+.text-bold {
+    font-weight: bold;
 }
 footer {
     text-align: center; 
