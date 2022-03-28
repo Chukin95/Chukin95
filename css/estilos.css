@@ -18,6 +18,33 @@ body {
 main {
     text-align: center;
 }
+.logo-img {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    width: 10%;
+    height: 100%;
+    content:url("../img/iconos/cebra_phone.jpg");
+}
+.logo-text-box {
+    white-space: nowrap;
+    display: inline;
+    float: right;
+    margin: -15% 0 -15% 13%;
+    width: 50%;
+    height: 20%;
+    content:url("../img/cebra_phone.png");
+}
+header {
+    /*display: inline-block;*/
+    width: 100%;
+    clear: both;
+    background: white;
+    display: flex;
+    align-items: baseline;
+    padding: 10px 8px 10px 8px;
+    margin: -8px -100px -8px -8px;
+}
 h1 {
     font-family: 'pricedownblack';
     font-size: 400%;
@@ -188,6 +215,7 @@ hr {
     justify-content: center;
     padding: 5px;
     margin: -8px;
+    margin-top: 0.3%;
 }
 .elementoDeNavegacion {
     display: inline-block;
