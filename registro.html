@@ -45,9 +45,9 @@
         <main>
             <h1 class="animate__animated animate__flipInY">REGISTRO:</h1>
             <br>
-            <div class="contenedorFormulario">
-                <form class="formulario" action="show_data.html" target="_blank">
-                    <label for="nombre">Nombres: </label><input size="40" type="text" name="nombre" placeholder="Ingrese su nombre...">
+            <div class="form-container">
+                <form class="form" action="show_data.html" target="_blank">
+                    <label class="form-text" for="nombre">Nombres: </label><input size="40" type="text" name="nombre" placeholder="Ingrese su nombre...">
                     <label for="apellido">Apellidos: </label><input size="30" type="text" name="apellido"placeholder="Ingrese su apellido...">
                     <label for="correo">Correo Eléctronico: </label><input type="email" name="Correo" id="correo" required placeholder="Ingrese su correo eléctronico...">
                     <label for="clave">Contraseña: </label><input type="password" name="clave" placeholder="Ingrese su contraseña...">
@@ -63,8 +63,8 @@
                     <label for="numero_direccion">Altura de Dirección: </label><input type="number" name="numero_direccion" placeholder="Ingrese la altura..."> <br><br>
                     <label for="celular">Número de Celular: </label><input type="tel" name="celular" placeholder="Ingrese su número celular..."> <br><br>
                     <label for="estudios">Estudios: </label><select id="estudios" name="estudios"><option value="primaria">Primaria</option><option value="secundaria">Secundaria</option><option value="terciario">Terciario</option><option value="universitario">Universitario</option></select><br><br>
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Reiniciar">
+                    <button type="submit" value="Enviar">Enviar</button>
+                    <button type="reset" value="Borrar">Borrar</button>
                 </form>
             </div>
             <br><br><br><br><br><br>
