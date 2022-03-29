@@ -103,8 +103,8 @@ progress {
     background: #1b9203;
 }
 hr {
-    border: 1px solid #f36f48;
-    height: 5px;
+    border: 0;
+    height: 3px;
     background: #f36f48;
 }
 iframe, audio {
