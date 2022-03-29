@@ -165,6 +165,21 @@ iframe, audio {
     font-weight: bold;
     margin: 3% 0;
 }
+.form-button {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: beige;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: center;
+    font-family: 'Fredoka', sans-serif;
+    margin-top: 10px;
+    cursor: pointer;
+}
 .smartphonesImg {
     justify-content: center;
     display: inline-block;
