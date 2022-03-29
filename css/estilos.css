@@ -180,6 +180,12 @@ iframe, audio {
     margin-top: 10px;
     cursor: pointer;
 }
+.form-button:hover {
+    background-color: #43a09d;
+}
+.form-button:active {
+    background-color: #22fff8;
+}
 .smartphonesImg {
     justify-content: center;
     display: inline-block;
