@@ -102,6 +102,11 @@ progress {
     color: #3fb6b2;
     background: #1b9203;
 }
+hr {
+    border: 0;
+    height: 1px;
+    background: #f36f48;
+}
 iframe {
     display: block;
     margin: 0 auto;
