@@ -277,6 +277,7 @@ iframe, audio {
 .elementoDeNavegacion:hover {
     background: #28ec01;
     color: #3fb6b2;
+    text-decoration: none;
 }
 .elementoDeNavegacion:active {
     background: #33ff00;
