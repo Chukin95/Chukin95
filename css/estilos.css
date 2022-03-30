@@ -37,13 +37,14 @@ main {
 }
 header {
     /*display: inline-block;*/
-    width: 100%;
+    /*float: right;*/
+    /*margin: -15% 0 -15% 13%;*/
     clear: both;
     background: white;
     display: flex;
     align-items: baseline;
-    padding: 0.625em 8px 0.625em 8px;
-    margin: -8px -100px -8px -8px;
+    /*padding: 0.625em 8px 0.625em 8px;
+    margin: -8px -100px -8px -8px;*/
 }
 h1 {
     font-family: 'pricedownblack';
@@ -61,11 +62,9 @@ h2 {
 footer {
     text-align: center; 
     background: rgb(255, 255, 0);
-    padding: 0.3125em;
-    margin: -8px;
-}
-.textoEnPieDePagina {
     font-family: Courier;
+    /*padding: 0.3125em;
+    margin: -8px;*/
 }
 table {
     display: table;
@@ -136,7 +135,20 @@ iframe, audio {
     padding: 1.25em;
     background: #1b9203;
     color: #cecece;
-    width: 33%;
+    width: 30%;
+}
+@media screen and (max-width: 600px) {
+    .columna {
+        width: 95%;
+    }
+    .padreColumnas {
+        flex-direction: column;
+    }
+    audio, iframe {
+        width: 100%;
+    }
+}
+    
 }
 .form-container {
     padding: 0.625em;
@@ -258,18 +270,21 @@ iframe, audio {
     background: #3fb6b2;
     display: flex;
     justify-content: center;
-    padding: 0.3125em;
+    /*padding: 0.3125em;
     margin: -8px;
-    margin-top: 0.3%;
+    margin-top: 0.3%;*/
 }
 .elementoDeNavegacion {
     display: inline-block;
     text-decoration: none;
-    background: #1b9203;
+    background: #3fb6b2;
     color: #fff;
-    padding: 1.25em;
-    margin-left: 0.625em;
-    margin-right: 0.625em;
+    font-size: 3.5vw;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    /*padding: 1.25em;
+    margin-left: 0.1em;
+    margin-right: 0.625em;*/
 }
 .elementoDeNavegacion:hover {
     background: #28ec01;
@@ -281,7 +296,7 @@ iframe, audio {
     color: #3fb6b2;
 }
 .botonMenu {
-    background: #1b9203;
+    background: #3fb6b2;
     color: #fff;
     padding: 0.625em 0;
     border: 2px solid rgb(40, 66, 0);
@@ -300,8 +315,5 @@ iframe, audio {
     }
     .desaparece {
         display: none;
-    }
-    .columna {
-        width: 15%;
     }
 }
