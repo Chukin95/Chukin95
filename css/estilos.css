@@ -194,6 +194,7 @@ iframe, audio {
 }
 .form-button:hover {
     background-color: #43a09d;
+    text-decoration: none;
 }
 .form-button:active {
     background-color: #22fff8;
@@ -252,6 +253,7 @@ iframe, audio {
 }
 .botonComprar:hover {
     background: #26f8f1;
+    text-decoration: none;
 }
 .botonComprar:active {
     background: #00fff7;
