@@ -14,6 +14,9 @@ body {
     background-image: url(../img/background.jpg);
     background-position: center;
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 99vw;
 }
 main {
     text-align: center;
@@ -21,7 +24,7 @@ main {
 .logo-img {
     display: inline;
     float: left;
-    margin-left: 10px;
+    margin-left: 0.625em;
     width: 10%;
     height: 100%;
     content:url("../img/iconos/cebra_phone.jpg");
@@ -37,12 +40,12 @@ main {
 }
 header {
     /*display: inline-block;*/
-    width: 100%;
+    width: 99vw;
     clear: both;
     background: white;
     display: flex;
     align-items: baseline;
-    padding: 10px 8px 10px 8px;
+    padding: 0.625em 8px 0.625em 8px;
     margin: -8px -100px -8px -8px;
 }
 h1 {
@@ -50,7 +53,7 @@ h1 {
     font-size: 400%;
     color: rgb(175, 209, 107);
     text-shadow: 3px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-    margin: 0px -5px -10px -5px;
+    margin: 0px -0.3125em -0.625em -0.3125em;
 }
 h2 {
     color:#270202;
@@ -61,7 +64,7 @@ h2 {
 footer {
     text-align: center; 
     background: rgb(255, 255, 0);
-    padding: 5px;
+    padding: 0.3125em;
     margin: -8px;
 }
 .textoEnPieDePagina {
@@ -95,8 +98,8 @@ td, th {
 }
 progress {
     width: 100%;
-    height: 30px;
-    margin: 20px 0;
+    height: 1.875em;
+    margin: 1.25em 0;
     padding: 3px;
     border: 2px #000;
     color: #3fb6b2;
@@ -114,8 +117,8 @@ iframe, audio {
 }
 .submit {
     background-color: #3fb6b2;
-    padding: 12px 45px;
-    border-radius: 5px;
+    padding: 12px 40.3125em;
+    border-radius: 0.3125em;
     cursor: pointer;
     color: #ffffff;
     border: none;
@@ -132,15 +135,15 @@ iframe, audio {
     flex-wrap: wrap;
 }
 .columna {
-    margin: 10px;
-    padding: 20px;
+    margin: 0.625em;
+    padding: 1.25em;
     background: #1b9203;
     color: #cecece;
     width: 33%;
 }
 .form-container {
-    padding: 10px;
-    margin: 5px;
+    padding: 0.625em;
+    margin: 0.3125em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,10 +157,10 @@ iframe, audio {
     width: 70%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    margin: 20px;
+    padding: 1.25em;
+    margin: 1.25em;
     background-color: rgba(204, 204, 204, 0.356);
-    border-radius: 10px;
+    border-radius: 0.625em;
 }
 .form-text {
     font-size: 1em;
@@ -167,17 +170,17 @@ iframe, audio {
 }
 .form-button {
     width: 20pc;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    padding: 0.625em;
+    margin-bottom: 0.625em;
+    border-radius: 0.625em;
     border: 1px solid #ccc;
     background-color: #4CAF50;
     color: beige;
-    font-size: 15px;
+    font-size: 0.9375em;
     font-weight: bold;
     align-self: center;
     font-family: 'Fredoka', sans-serif;
-    margin-top: 10px;
+    margin-top: 0.625em;
     cursor: pointer;
 }
 .form-button:hover {
@@ -202,11 +205,11 @@ iframe, audio {
 .producto {
     font-family: 'Lato', sans-serif;
     background: rgb(230, 230, 230);
-    margin: 10px;
-    padding: 10px;
+    margin: 0.625em;
+    padding: 0.625em;
     border: 1px solid #333;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px #333;
+    border-radius: 0.3125em;
+    box-shadow: 0.3125em 0.3125em 0.3125em #333;
     width: 22%;
     box-sizing: border-box;
 }
@@ -233,10 +236,10 @@ iframe, audio {
     font-weight: 700;
     background: #43a09d;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     color: #cecece;
     padding: 0.5% 10% 0.7% 10%;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 .botonComprar:hover {
     background: #26f8f1;
@@ -258,7 +261,7 @@ iframe, audio {
     background: #3fb6b2;
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 0.3125em;
     margin: -8px;
     margin-top: 0.3%;
 }
@@ -267,9 +270,9 @@ iframe, audio {
     text-decoration: none;
     background: #1b9203;
     color: #fff;
-    padding: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 1.25em;
+    margin-left: 0.625em;
+    margin-right: 0.625em;
 }
 .elementoDeNavegacion:hover {
     background: #28ec01;
@@ -282,7 +285,7 @@ iframe, audio {
 .botonMenu {
     background: #1b9203;
     color: #fff;
-    padding: 10px 0;
+    padding: 0.625em 0;
     border: 2px solid rgb(40, 66, 0);
     display: none;
 }
@@ -292,7 +295,7 @@ iframe, audio {
         flex-direction: column;
     }
     .elementoDeNavegacion {
-        margin: 10px 0;
+        margin: 0.625em 0;
     }
     .botonMenu {
         display: inline-block;
