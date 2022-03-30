@@ -14,9 +14,6 @@ body {
     background-image: url(../img/background.jpg);
     background-position: center;
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 99vw;
 }
 main {
     text-align: center;
@@ -40,7 +37,7 @@ main {
 }
 header {
     /*display: inline-block;*/
-    width: 99vw;
+    width: 100%;
     clear: both;
     background: white;
     display: flex;
