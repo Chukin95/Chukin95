@@ -14,7 +14,6 @@ body {
     background-image: url(../img/background.jpg);
     background-position: center;
     background-size: 100% 100%;
-    margin: 0% 5%;
 }
 main {
     text-align: center;
@@ -267,10 +266,19 @@ iframe, audio {
     .producto {
         width: 45%;
     }
+    .form {
+        width: 80%;
+    }
+    .botonMenu {
+        font-size: 1.5em;
+    }
 }
 @media (max-width: 560px) {
     .producto {
         width: 90%;
+    }
+    .form {
+        width: 100%;
     }
 }
 .barraDeNavegacion {
