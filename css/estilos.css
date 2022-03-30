@@ -270,7 +270,7 @@ iframe, audio {
         width: 80%;
     }
     .botonMenu {
-        font-size: 5pc;
+        font-size: 2pc;
     }
 }
 @media (max-width: 560px) {
@@ -281,7 +281,7 @@ iframe, audio {
         width: 100%;
     }
     .botonMenu {
-        font-size: 10pc;
+        font-size: 2pc;
     }
 }
 .barraDeNavegacion {
