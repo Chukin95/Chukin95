@@ -246,7 +246,7 @@ iframe, audio {
 }
 .botonComprar {
     display: block;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Fredoka One', sans-serif;
     font-weight: 700;
     background: #43a09d;
     text-decoration: none;
