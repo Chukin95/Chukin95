@@ -82,6 +82,10 @@ table {
     border: 4px solid rgb(0, 133, 11);
     inset-inline-start: auto;
     inset-inline-start: auto;
+    margin-bottom: 5vw;
+}
+.mapa {
+    margin-bottom: 5vw;
 }
 td, th {
     padding: 8px;
@@ -274,7 +278,7 @@ iframe, audio {
         width: 80%;
     }
     .botonMenu {
-        font-size: 2pc;
+        font-size: 5vw;
     }
 }
 @media (max-width: 560px) {
@@ -285,7 +289,7 @@ iframe, audio {
         width: 100%;
     }
     .botonMenu {
-        font-size: 2pc;
+        font-size: 3vw;
     }
 }
 .barraDeNavegacion {
@@ -299,8 +303,7 @@ iframe, audio {
     background: #3fb6b2;
     color: #fff;
     font-size: 3.5vw;
-    margin-left: 0.3em;
-    margin-right: 0.3em;
+    margin: 0 1vw;
 }
 .elementoDeNavegacion:hover {
     background: #28ec01;
@@ -314,9 +317,18 @@ iframe, audio {
 .botonMenu {
     background: #3fb6b2;
     color: #fff;
-    padding: 0.625em 0;
-    border: 2px solid rgb(40, 66, 0);
+    margin: 1% 0;
+    border: 0;
     display: none;
+}
+.botonMenu:hover {
+    background: #28ec01;
+    color: #3fb6b2;
+    text-decoration: none;
+}
+.botonMenu:active {
+    background: #33ff00;
+    color: #3fb6b2;
 }
 @media (max-width: 740px) {
     .barraDeNavegacion {
