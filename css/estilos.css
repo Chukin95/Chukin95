@@ -289,7 +289,7 @@ iframe, audio {
         width: 100%;
     }
     .botonMenu {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 }
 .barraDeNavegacion {
@@ -320,15 +320,6 @@ iframe, audio {
     margin: 1% 0;
     border: 0;
     display: none;
-}
-.botonMenu:hover {
-    background: #28ec01;
-    color: #3fb6b2;
-    text-decoration: none;
-}
-.botonMenu:active {
-    background: #33ff00;
-    color: #3fb6b2;
 }
 @media (max-width: 740px) {
     .barraDeNavegacion {
