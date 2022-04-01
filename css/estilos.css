@@ -60,15 +60,10 @@ h1 {
 h2 {
     color:#270202;
 }
-.text-bold {
-    font-weight: bold;
-}
 footer {
     text-align: center; 
     background: rgb(255, 255, 0);
     font-family: Courier;
-    /*padding: 0.3125em;
-    margin: -8px;*/
 }
 table {
     display: table;
@@ -108,6 +103,17 @@ progress {
     border: 2px #000;
     color: #3fb6b2;
     background: #1b9203;
+}
+.text_progress {
+    font-weight: 900;
+    font-size: 24px;
+    color: #000;
+    display: inline-block;
+}
+.logo_progress {
+    display: inline-block;
+    margin-left: 0.625em;
+    width: 10%;
 }
 hr {
     border: 0;
