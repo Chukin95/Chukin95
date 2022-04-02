@@ -101,7 +101,7 @@ progress {
     height: 1.875em;
     margin: 1.25em 0;
     padding: 3px;
-    border: 2px #000;
+    border: 3px solid green;
     color: green;
     background: grey;
 }
