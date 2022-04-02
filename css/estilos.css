@@ -21,6 +21,7 @@ html, body {
 }
 main {
     text-align: center;
+    margin: 0 5%;
 }
 .logo-img {
     display: inline;
@@ -238,6 +239,7 @@ iframe, audio {
     border-radius: 0.3125em;
     box-shadow: 0.3125em 0.3125em 0.3125em #333;
     width: 22%;
+    height: 100%;
     box-sizing: border-box;
 }
 .imgProducto {
@@ -248,7 +250,7 @@ iframe, audio {
     font-weight: bold;
     color: #202020;
     height: 2%;
-    font-size: 1.5pc;
+    font-size: 150%;
 }
 .precioProductos {
     font-weight: 900;
@@ -276,7 +278,7 @@ iframe, audio {
 .botonComprar:active {
     background: #00fff7;
 }
-@media (max-width: 1111px) {
+@media (max-width: 1255px) {
     .producto {
         width: 45%;
     }
@@ -287,7 +289,7 @@ iframe, audio {
         font-size: 5vw;
     }
 }
-@media (max-width: 560px) {
+@media (max-width: 630px) {
     .producto {
         width: 90%;
     }
