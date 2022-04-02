@@ -102,7 +102,7 @@ progress {
     margin: 1.25em 0;
     padding: 3px;
     border: 2px #000;
-    color: green;
+    color: rgb(0, 209, 0);
     background: green;
 }
 .text_progress {
