@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index,follow">
+        <title>CeBra Phone - Inicio</title>
+        <meta name="description" content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
+        <meta name="keywords" content="Celulares, Accesorios, Iphone, Apple, Xiaomi">
+        <meta name="author" content="Cristian Gomez">
+        <meta name="copyright" content="Cristian Gomez">
+        <link rel="icon" href="img/favicon.ico" type="image/ico">
+        <!--- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Javascript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- LOGO A LA IZQUIERDA y NOMBRE DE EMPRESA CON LETRA GRANDE Y PERSONALIZADA -->
+            <span class="animate__animated animate__backInLeft logo-img">
+            </span>
+            <span class="animate__animated animate__bounceInRight logo-text-box">
+            </span>
+        </header>
+
+        <nav class="barraDeNavegacion">
+            <button class="botonMenu" onclick="accion()">MENÚ</button>
+            <a class="elementoDeNavegacion desaparece" href="index.html">INICIO</a>
+            <a class="elementoDeNavegacion desaparece" href="productos.html">PRODUCTOS</a>
+            <a class="elementoDeNavegacion desaparece" href="sucursales.html">SUCURSALES</a>
+            <a class="elementoDeNavegacion desaparece" href="contacto.html">CONTACTO</a>
+            <a class="elementoDeNavegacion desaparece" href="registro.html">REGISTRO</a>
+        </nav>
+
+        <script>
+            function accion(){
+                var menuElemento = document.getElementsByClassName('elementoDeNavegacion');
+                for(var i = 0; i < menuElemento.length; i++){
+                    menuElemento[i].classList.toggle('desaparece');
+                }
+            }
+        </script>
+
+        <main>
+            <h1 class="animate__animated animate__flipInY">INICIO:</h1>
+            <h2>Mi Aprendizaje en Programación:</h2>
+
+            <img class="logo_progress" src="./img/lenguajes/Visual_Studio_Code_logo.png" alt="" title="VISUAL STUDIO CODE">
+            <progress id="VSCODE" max="100" value="50" data-label="VISUAL STUDIO CODE" title="VISUAL STUDIO CODE"> 50% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/HTML5_logo.png" alt="" title="HTML 5">
+            <progress id="HTML" max="100" value="69" data-label="HTML 5" title="HTML 5"> 69% </progress>
+            
+            <img class="logo_progress" src="./img/lenguajes/CSS3_logo.png" alt="" title="CSS 3">
+            <progress id="CSS" max="100" value="27" data-label="CSS 3" title="CSS 3"> 27% </progress>
+            
+            <img class="logo_progress" src="./img/lenguajes/Javascript_logo.png" alt="" title="JAVASCRIPT">
+            <progress id="JAVASCRIPT" max="100" value="32" data-label="JAVASCRIPT" title="JAVASCRIPT"> 32% </progress>
+            
+            <img class="logo_progress" src="./img/lenguajes/Bootstrap_logo.png" alt="" title="BOOTSTRAP 5">
+            <progress id="BOOTSTRAP" max="100" value="0" data-label="BOOTSTRAP 5" title="BOOTSTRAP 5"> 0% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Git_logo.png" alt="" title="GIT">
+            <progress id="GIT" max="100" value="0" data-label="GIT" title="GIT"> 20% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Github_logo.png" alt="" title="GITHUB">
+            <progress id="GITHUB" max="100" value="20" data-label="GITHUB" title="GITHUB"> 20% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Vue.js_logo.png" alt="" title="VUE.JS">
+            <progress id="VUEJS" max="100" value="0" data-label="VUE.JS" title="VUE.JS"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/MySQL_logo.png" alt="" title="MYSQL">
+            <progress id="MYSQL" max="100" value="5" data-label="MYSQL" title="MYSQL"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Python_logo.png" alt="" title="PYTHON">
+            <progress id="PYTHON" max="100" value="15" data-label="PYTHON" title="PYTHON"> 15% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Flask_logo.png" alt="" title="FLASK">
+            <progress id="FLASK" max="100" value="0" data-label="FLASK" title="FLASK"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/django_logo.png" alt="" title="DJANGO">
+            <progress id="DJANGO" max="100" value="0" data-label="DJANGO" title="DJANGO"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Angular_logo.png" alt="" title="ANGULAR">
+            <progress id="ANGULAR" max="100" value="0" data-label="ANGULAR" title="ANGULAR"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/React_logo.png" alt="" title="REACT">
+            <progress id="REACT" max="100" value="0" data-label="REACT" title="REACT"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/JQuery_logo.png" alt="" title="JQUERY">
+            <progress id="JQUERY" max="100" value="0" data-label="JQUERY" title="JQUERY"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Node.js_logo.png" alt="" title="NODE.JS">
+            <progress id="NODEJS" max="100" value="0" data-label="NODE.JS" title="NODE.JS"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Ajax_logo.png" alt="" title="AJAX">
+            <progress id="AJAX" max="100" value="0" data-label="AJAX" title="AJAX"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/PostgreSQL_logo.png" alt="" title="POSTGRESQL">
+            <progress id="POSTGRESQL" max="100" value="0" data-label="POSTGRESQL" title="POSTGRESQL"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/PHP_logo.png" alt="" title="PHP">
+            <progress id="PHP" max="100" value="0" data-label="PHP" title="PHP"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Csharp_Logo.png" alt="" title="C#">
+            <progress id="CSHARP" max="100" value="0" data-label="C#" title="C#"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Java_logo.png" alt="" title="JAVA">
+            <progress id="JAVA" max="100" value="0" data-label="JAVA" title="JAVA"> 5% </progress>
+
+            <img class="logo_progress" src="./img/lenguajes/Go_logo.png" alt="" title="GO">
+            <progress id="GO" max="100" value="0" data-label="GO" title="GO"> 5% </progress>
+
+            <!-- <label class="text_progress" for="LENGUAJE">LENGUAJE</label><br>
+            <img class="logo_progress" src="./img/lenguajes/" alt="" title="LENGUAJE">
+            <progress id="LENGUAJE" max="100" value="0" data-label="0%" title="LENGUAJE">  -->
+            
+            <img class="logo_progress" src="./img/lenguajes/Lua_logo.png" alt="" title="LUA">
+            <progress id="LUA" max="100" value="30" data-label="LUA" title="LUA"> 30% </progress>
+
+            <audio id="playAudio" controls autoplay loop>
+                <source src="./audio/selfcontrol.ogg" type="audio/ogg">
+            </audio>
+            <br>
+            <script>
+                var audio = document.getElementById("playAudio");
+                audio.volume = 0.2;
+            </script>
+        </main>
+        
+        <footer>
+            <nav>
+                <br><br>
+                <a href="https://www.facebook.com/Braianobregonnn" target="_blank"><img src="./img/iconos/facebook.png" alt="facebook" title="Facebook" width="30px" height="30px"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="./img/iconos/youtube.png" alt="youtube" title="Youtube" width="30px" height="30px"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="./img/iconos/twitter.png" alt="twitter" title="Twitter" width="30px" height="30px"></a>
+                <a href="https://www.instagram.com/cebra_phone" target="_blank"><img src="./img/iconos/instagram.png" alt="instagram" title="Instagram" width="30px" height="30px"></a>
+                <a href="https://www.linkedin.com/in/cristian-javier-gomez-448218215/" target="_blank"><img src="./img/iconos/linkedin.png" alt="linkedin" title="Linkedin" width="30px" height="30px"></a>
+                <a href="https://www.github.com/Chukin95" target="_blank"><img src="./img/iconos/github.png" alt="github" title="Github" width="30px" height="30px"></a>
+            </nav>
+            <br>
+            <p>Copyright © 2022-2025 All Rights Reserved. By Cristian Gómez.</p>
+            <br><br>
+        </footer>
+    </body>
+</html>

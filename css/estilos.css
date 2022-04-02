@@ -96,14 +96,48 @@ td, th {
     font-weight: bold;
     color: white;
 }
-progress {
+/*progress {
     width: 100%;
     height: 1.875em;
     margin: 1.25em 0;
     border: 3px solid green;
     color: green;
     background: grey;
-}
+}*/
+progress {
+    text-align: center;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1.4em;
+    margin: 1.25em 0;
+    border: 3px solid green;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    background: grey;
+    /* Set the progressbar to relative */
+    position:relative;
+  }
+  progress:before {
+    content: attr(data-label);
+    font-size: 0.8em;
+    vertical-align: 0;
+    
+    /*Position text over the progress bar */
+    position:absolute;
+    left:0;
+    right:0;
+  }
+  progress::-webkit-progress-bar {
+    background-color: #c9c9c9;
+  }
+  progress::-webkit-progress-value {
+    background-color: green;
+  }
+  progress::-moz-progress-bar {
+    background-color: green;
+  }
 .text_progress {
     font-weight: 900;
     font-size: 24px;
