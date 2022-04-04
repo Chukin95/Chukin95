@@ -195,6 +195,9 @@ iframe, audio {
     audio, iframe {
         width: 100%;
     }
+    .form-button {
+        width: 100%;
+    }
 }
 .form-container {
     display: flex;
@@ -229,7 +232,7 @@ iframe, audio {
     font-style: italic;
 }
 .form-button {
-    width: 100%;
+    width: 20pc;
     padding: 0.625em;
     margin-bottom: 0.625em;
     border-radius: 0.625em;
