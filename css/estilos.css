@@ -229,7 +229,7 @@ iframe, audio {
     font-style: italic;
 }
 .form-button {
-    width: 20pc;
+    width: 100%;
     padding: 0.625em;
     margin-bottom: 0.625em;
     border-radius: 0.625em;
