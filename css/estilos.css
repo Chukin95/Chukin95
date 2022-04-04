@@ -14,6 +14,9 @@ body {
     background-image: url(../img/background.jpg);
     background-position: center;
     background-size: 100% 100%;
+    /*transform:rotate(90deg);
+    -ms-transform:rotate(90deg);  IE 9 
+    -webkit-transform:rotate(90deg);  Opera, Chrome, and Safari */
 }
 html, body {
     max-width: 100% !important;
@@ -334,6 +337,9 @@ iframe, audio {
     }
     .botonMenu {
         font-size: 4vw;
+    }
+    .form-button {
+        width: 100%;
     }
 }
 .barraDeNavegacion {
