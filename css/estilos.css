@@ -342,10 +342,20 @@ iframe, audio {
         width: 100%;
     }
 }
+.barraDeNavegacionfixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+}
 .barraDeNavegacion {
     background: #3fb6b2;
     display: flex;
     justify-content: center;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
 }
 .elementoDeNavegacion {
     display: inline-block;

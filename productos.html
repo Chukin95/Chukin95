@@ -42,12 +42,27 @@
         </nav>
 
         <script>
-            function accion(){
+            function accion()
+            {
                 var menuElemento = document.getElementsByClassName('elementoDeNavegacion');
-                for(var i = 0; i < menuElemento.length; i++){
+                for(var i = 0; i < menuElemento.length; i++)
+                {
                     menuElemento[i].classList.toggle('desaparece');
                 }
             }
+            var altura = $('.barraDeNavegacion').offset().top;
+            $(window).on("scroll", function ()
+                {
+                    if ($(window).scrollTop() > altura)
+                    {
+                        $(".barraDeNavegacion").addClass("barraDeNavegacionfixed");
+                    } 
+                    else
+                    {
+                        $(".barraDeNavegacion").removeClass("barraDeNavegacionfixed");
+                    }
+                }
+            );
         </script>
 
         <main>

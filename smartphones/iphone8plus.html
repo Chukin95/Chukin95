@@ -38,16 +38,31 @@
             <a class="elementoDeNavegacion desaparece" href="../productos.html">PRODUCTOS</a>
             <a class="elementoDeNavegacion desaparece" href="../sucursales.html">SUCURSALES</a>
             <a class="elementoDeNavegacion desaparece" href="../contacto.html">CONTACTO</a>
-            <a class="elementoDeNavegacion desaparece" href="registro.html">REGISTRO</a>
+            <a class="elementoDeNavegacion desaparece" href="../registro.html">REGISTRO</a>
         </nav>
 
         <script>
-            function accion(){
+            function accion()
+            {
                 var menuElemento = document.getElementsByClassName('elementoDeNavegacion');
-                for(var i = 0; i < menuElemento.length; i++){
+                for(var i = 0; i < menuElemento.length; i++)
+                {
                     menuElemento[i].classList.toggle('desaparece');
                 }
             }
+            var altura = $('.barraDeNavegacion').offset().top;
+            $(window).on("scroll", function ()
+                {
+                    if ($(window).scrollTop() > altura)
+                    {
+                        $(".barraDeNavegacion").addClass("barraDeNavegacionfixed");
+                    } 
+                    else
+                    {
+                        $(".barraDeNavegacion").removeClass("barraDeNavegacionfixed");
+                    }
+                }
+            );
         </script>
 
         <main>
