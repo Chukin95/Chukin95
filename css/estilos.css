@@ -349,6 +349,9 @@ iframe, audio {
     z-index: 1;
     box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
 }
+.mainfixed {
+    margin-top: 50px;
+}
 .barraDeNavegacion {
     background: #3fb6b2;
     display: flex;

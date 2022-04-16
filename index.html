@@ -56,10 +56,16 @@
                     if ($(window).scrollTop() > altura)
                     {
                         $(".barraDeNavegacion").addClass("barraDeNavegacionfixed");
+                        $("main").addClass("mainfixed");
+                        $(".barraDeNavegacion").addClass("animate__animated animate__fadeInDown");
+                        $(".barraDeNavegacion").removeClass("animate__fadeInUp");
                     } 
                     else
                     {
                         $(".barraDeNavegacion").removeClass("barraDeNavegacionfixed");
+                        $("main").removeClass("mainfixed");
+                        $(".barraDeNavegacion").removeClass("animate__fadeInDown");
+                        $(".barraDeNavegacion").addClass("animate__animated animate__fadeInUp");
                     }
                 }
             );
