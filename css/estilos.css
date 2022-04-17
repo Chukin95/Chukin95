@@ -1,3 +1,8 @@
+:root {
+    --color-primario: #5187f1;
+    --color-secundario: #084dfa;
+    --color-terciario: #012268; /* var(--color-terciario) */
+}
 @font-face {
     font-family: 'pricedownblack';
     src: url('../fonts/pricedown/pricedown_bl.otf'), /* Open Type Font */
@@ -9,6 +14,13 @@
          url("../fonts/pricedown/pricedown_bl.svg#svgFontName") format("svg"); /* Legacy iOS */
     font-weight: normal;
     font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 body {
     background-image: url(../img/background.jpg);
@@ -358,6 +370,7 @@ iframe, audio {
     justify-content: center;
     transition: all ease 0.5s;
     -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
     -o-transition: all ease 0.5s;
 }
 .elementoDeNavegacion {
