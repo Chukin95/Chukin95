@@ -95,6 +95,10 @@ table {
     inset-inline-start: auto;
     margin-bottom: 3%;
 }
+a[href] {
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+}
 .mapa {
     margin-bottom: 3%;
 }
