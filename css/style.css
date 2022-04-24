@@ -388,26 +388,25 @@ iframe, audio {
     border: 1px solid #333;
     border-radius: 0.3125em;
     box-shadow: 0.3125em 0.3125em 0.3125em #333;
-    width: 22%;
-    height: 100%;
     box-sizing: border-box;
 }
 .imgProducto {
     width: 100%;
-    height: 45%;
+    height: 57%;
 }
 .h2Producto {
     font-weight: bold;
     color: #202020;
-    height: 2%;
     font-size: 2vw;
 }
 .precioProductos {
-    font-weight: 900;
+    font-weight: bold;
+    font-size: 2vw;
     color: #5fc24c;
 }
 .pProductos {
     font-weight: 300;
+    font-size: 1.5vw;
     color: #202020;
 }
 .botonComprar {
@@ -418,8 +417,9 @@ iframe, audio {
     text-decoration: none;
     border-radius: 0.3125em;
     color: #cecece;
-    padding: 0.5% 10% 0.7% 10%;
-    margin-bottom: 0.625em;
+    padding: 4px;
+    /* padding: 0.5% 10% 0.7% 10%; */
+    /* margin-bottom: 0.625em; */
 }
 .botonComprar:hover {
     background: #26f8f1;
