@@ -61,12 +61,14 @@ col-12 {
 .row {
     display: flex;
     flex-wrap: wrap;
+    max-width: 100%;
     margin-right: -15px;
     margin-left: -15px;
 }
 .row > [class*="col-"] {
     padding-right: 15px;
     padding-left: 15px;
+
 }
 body {
     background-image: url(../img/background.jpg);
