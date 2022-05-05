@@ -111,6 +111,7 @@ header {
     background: white;
     display: flex;
     align-items: baseline;
+    padding: 1vw 0;
     /*padding: 0.625em 8px 0.625em 8px;
     margin: -8px -100px -8px -8px;*/
 }
@@ -125,9 +126,14 @@ h2 {
     color:#270202;
 }
 footer {
+    padding: 2vw 0 2vw 0;
     text-align: center; 
     background: rgb(255, 255, 0);
     font-family: Courier;
+}
+#idcopyright {
+    font-size: 1.2rem;
+    padding: 1vw 0 0 0;
 }
 table {
     display: table;
