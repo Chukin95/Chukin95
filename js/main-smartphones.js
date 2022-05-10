@@ -42,7 +42,18 @@ whatsapp_logo.setAttribute('alt', 'whatsapp');
 whatsapp_logo.setAttribute('title', 'Whatsapp');
 whatsapp_contact.appendChild(whatsapp_logo);
 whatsapp_div.appendChild(whatsapp_contact);
+let whatsapp_close = document.createElement('i');
+whatsapp_close.classList.add('fa-solid');
+whatsapp_close.classList.add('fa-circle-xmark');
+whatsapp_close.classList.add('fa-xs');
+whatsapp_close.classList.add('whatsapp_close');
+whatsapp_close.setAttribute('onclick', 'cerrar_whatsapp()');
+whatsapp_div.appendChild(whatsapp_close);
 document.body.appendChild(whatsapp_div);
+
+function cerrar_whatsapp() {
+    document.getElementById("whatsapp_div").style.display = "none";;
+}
 
 // SCRIPT PARA EL MENÚ
 function accion() {
