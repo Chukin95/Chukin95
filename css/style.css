@@ -531,6 +531,18 @@ audio {
     z-index: 1;
 }
 
+.whatsapp_close {
+    position: relative;
+    top: -2.3vw;
+    color: rgba(0, 100, 0, 0.5);
+}
+.whatsapp_close:hover {
+    color: rgba(10, 185, 10, 0.7);
+}
+.whatsapp_close:active {
+    color: rgba(20, 255, 20, 1);
+}
+
 .whatsapp_logo {
     width: 3vw;
     height: 3vw;

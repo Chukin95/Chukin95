@@ -27,6 +27,7 @@ document.getElementById("idfooter").innerHTML = footer_content;
 
 // SCRIPT PARA WHATSAPP FIXED
 let whatsapp_div = document.createElement('div');
+whatsapp_div.setAttribute('id', 'whatsapp_div');
 whatsapp_div.classList.add('whatsapp_container');
 let whatsapp_contact = document.createElement('a');
 whatsapp_contact.classList.add('whatsapp_contact');
@@ -39,7 +40,20 @@ whatsapp_logo.setAttribute('alt', 'whatsapp');
 whatsapp_logo.setAttribute('title', 'Whatsapp');
 whatsapp_contact.appendChild(whatsapp_logo);
 whatsapp_div.appendChild(whatsapp_contact);
+// <i class="fa-solid fa-circle-xmark"></i>
+let whatsapp_close = document.createElement('i');
+whatsapp_close.classList.add('fa-solid');
+whatsapp_close.classList.add('fa-circle-xmark');
+whatsapp_close.classList.add('fa-xs');
+//whatsapp_close.addEventListener('click', cerrar_whatsapp);
+whatsapp_close.classList.add('whatsapp_close');
+whatsapp_close.setAttribute('onclick', 'cerrar_whatsapp()');
+whatsapp_div.appendChild(whatsapp_close);
 document.body.appendChild(whatsapp_div);
+
+function cerrar_whatsapp() {
+    document.getElementById("whatsapp_div").style.display = "none";;
+}
 
 // SCRIPT PARA EL MENÚ
 function accion() {
