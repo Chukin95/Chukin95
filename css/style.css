@@ -1,20 +1,30 @@
 :root {
     --color-primario: #5187f1;
     --color-secundario: #084dfa;
-    --color-terciario: #012268; /* var(--color-terciario) */
+    --color-terciario: #012268;
+    /* var(--color-terciario) */
 }
+
 @font-face {
     font-family: 'pricedownblack';
-    src: url('../fonts/pricedown/pricedown_bl.otf'), /* Open Type Font */
-         url('../fonts/pricedown/pricedown_bl.woff2') format('woff2'), /* Modern Browsers */
-         url('../fonts/pricedown/pricedown_bl.woff') format('woff'), /* Modern Browsers */
-         url("../fonts/pricedown/pricedown_bl.eot"), /* IE9 Compat Modes */
-         url("../fonts/pricedown/pricedown_bl.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-         url("../fonts/pricedown/pricedown_bl.ttf") format("truetype"), /* Safari, Android, iOS */
-         url("../fonts/pricedown/pricedown_bl.svg#svgFontName") format("svg"); /* Legacy iOS */
+    src: url('../fonts/pricedown/pricedown_bl.otf'),
+        /* Open Type Font */
+        url('../fonts/pricedown/pricedown_bl.woff2') format('woff2'),
+        /* Modern Browsers */
+        url('../fonts/pricedown/pricedown_bl.woff') format('woff'),
+        /* Modern Browsers */
+        url("../fonts/pricedown/pricedown_bl.eot"),
+        /* IE9 Compat Modes */
+        url("../fonts/pricedown/pricedown_bl.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../fonts/pricedown/pricedown_bl.ttf") format("truetype"),
+        /* Safari, Android, iOS */
+        url("../fonts/pricedown/pricedown_bl.svg#svgFontName") format("svg");
+    /* Legacy iOS */
     font-weight: normal;
     font-style: normal;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -22,42 +32,55 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
+
 col-1 {
     width: 8.33333%;
 }
+
 col-2 {
     width: 16.66667%;
 }
+
 col-3 {
     width: 25%;
 }
+
 col-4 {
     width: 33.33333%;
 }
+
 col-5 {
     width: 41.66667%;
 }
+
 col-6 {
     width: 50%;
 }
+
 col-7 {
     width: 58.33333%;
 }
+
 col-8 {
     width: 66.66667%;
 }
+
 col-9 {
     width: 75%;
 }
+
 col-10 {
     width: 83.33333%;
 }
+
 col-11 {
     width: 91.66667%;
 }
+
 col-12 {
     width: 100%;
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -65,11 +88,13 @@ col-12 {
     margin-right: -15px;
     margin-left: -15px;
 }
-.row > [class*="col-"] {
+
+.row>[class*="col-"] {
     padding-right: 15px;
     padding-left: 15px;
 
 }
+
 body {
     background-image: url(../img/background.jpg);
     background-position: center;
@@ -78,23 +103,28 @@ body {
     -ms-transform:rotate(90deg);  IE 9 
     -webkit-transform:rotate(90deg);  Opera, Chrome, and Safari */
 }
-html, body {
+
+html,
+body {
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
+
 main {
     text-align: center;
     margin: 0 5%;
     min-height: 25vw;
 }
+
 .logo-img {
     display: inline;
     float: left;
     margin-left: 0.625em;
     width: 10%;
     height: 100%;
-    content:url("../img/iconos/cebra_phone.jpg");
+    content: url("../img/iconos/cebra_phone.jpg");
 }
+
 .logo-text-box {
     white-space: nowrap;
     display: inline;
@@ -102,8 +132,9 @@ main {
     margin: -15% 0 -15% 13%;
     width: 50%;
     height: 20%;
-    content:url("../img/cebra_phone.png");
+    content: url("../img/cebra_phone.png");
 }
+
 header {
     /*display: inline-block;*/
     /*float: right;*/
@@ -116,6 +147,7 @@ header {
     /*padding: 0.625em 8px 0.625em 8px;
     margin: -8px -100px -8px -8px;*/
 }
+
 h1 {
     font-family: 'pricedownblack';
     font-size: 4.5em;
@@ -123,18 +155,22 @@ h1 {
     text-shadow: 3px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
     margin: 0px -0.3125em -0em -0.3125em;
 }
+
 h2 {
-    color:#270202;
+    color: #270202;
 }
+
 footer {
     padding: 2vw 0 2vw 0;
-    text-align: center; 
+    text-align: center;
     background: rgb(255, 255, 0);
     font-family: Courier;
 }
+
 #idcopyright {
     padding: 1vw 0 0 0;
 }
+
 table {
     display: table;
     border-collapse: separate;
@@ -149,14 +185,18 @@ table {
     inset-inline-start: auto;
     margin-bottom: 3%;
 }
+
 .barraDeNavegacion a[href] {
     margin: 0;
     padding: 0px 10px 0px 10px;
 }
+
 .mapa {
     margin-bottom: 3%;
 }
-td, th {
+
+td,
+th {
     padding: 8px;
     background-color: rgb(192, 192, 192);
     border-color: rgb(55, 53, 65);
@@ -164,17 +204,20 @@ td, th {
     display: table-cell;
     vertical-align: inherit;
 }
+
 .table-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
 .selected {
     background-color: #1b9203;
     font-weight: bold;
     color: white;
 }
+
 /*progress {
     width: 100%;
     height: 1.875em;
@@ -196,53 +239,63 @@ progress {
     font-size: xx-large;
     background: grey;
     /* Set the progressbar to relative */
-    position:relative;
-  }
-  progress:before {
+    position: relative;
+}
+
+progress:before {
     content: attr(data-label);
     font-size: 0.8em;
     vertical-align: 0;
-    
+
     /*Position text over the progress bar */
-    position:absolute;
-    left:0;
-    right:0;
-  }
-  progress::-webkit-progress-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+progress::-webkit-progress-bar {
     background-color: #c9c9c9;
-  }
-  progress::-webkit-progress-value {
+}
+
+progress::-webkit-progress-value {
     background-color: green;
-  }
-  progress::-moz-progress-bar {
+}
+
+progress::-moz-progress-bar {
     background-color: green;
-  }
+}
+
 .text_progress {
     font-weight: 900;
     font-size: 24px;
     color: #000;
     display: inline-block;
 }
+
 .logo_progress {
     display: inline-block;
     margin-left: 0.625em;
     width: 10%;
 }
+
 hr {
     border: 0;
     height: 2px;
     background: #f36f48;
 }
+
 iframe {
     display: block;
     margin: 0 auto;
     width: 80%;
 }
+
 audio {
     display: block;
     margin: 1vw auto;
     width: 40%;
 }
+
 .submit {
     background-color: #3fb6b2;
     padding: 12px 40.3125em;
@@ -254,14 +307,17 @@ audio {
     margin: 0;
     font-weight: bold;
 }
+
 .submit:hover {
     background-color: #43a09d;
 }
+
 .padreColumnas {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
+
 .columna {
     margin: 0.625em;
     padding: 1.25em;
@@ -269,20 +325,7 @@ audio {
     color: #cecece;
     width: 30%;
 }
-@media screen and (max-width: 600px) {
-    .columna {
-        width: 95%;
-    }
-    .padreColumnas {
-        flex-direction: column;
-    }
-    audio, iframe {
-        width: 100%;
-    }
-    .form-button {
-        width: 100%;
-    }
-}
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -294,6 +337,7 @@ audio {
     padding: 1.25em;
     border-radius: 0.3125em;
 }
+
 .form {
     width: 70%;
     display: flex;
@@ -303,18 +347,21 @@ audio {
     border-radius: 0.625em;
     box-shadow: 1px 1px 5px #666;
 }
+
 .form-text {
     font-size: 1em;
     color: #000;
     font-weight: bold;
     margin: 3% 0;
 }
+
 .form-genero-text {
     font-size: normal;
     color: #333;
     font-weight: 100;
     font-style: italic;
 }
+
 .form-button {
     width: 20pc;
     padding: 0.625em;
@@ -330,26 +377,32 @@ audio {
     margin-top: 0.625em;
     cursor: pointer;
 }
+
 .form-button:hover {
     background-color: #43a09d;
     text-decoration: none;
 }
+
 .form-button:active {
     background-color: #22fff8;
 }
+
 .smartphonesImg {
     justify-content: center;
     display: inline-block;
 }
+
 .contenedor {
     /*display: inline-block;*/
     margin: 0 auto;
     margin-left: 5%;
 }
+
 .flex {
     display: flex;
     flex-wrap: wrap;
 }
+
 .producto {
     font-family: 'Lato', sans-serif;
     background: rgb(230, 230, 230);
@@ -362,24 +415,29 @@ audio {
     height: 100%;
     box-sizing: border-box;
 }
+
 .imgProducto {
     width: 100%;
     height: 45%;
 }
+
 .h2Producto {
     font-weight: bold;
     color: #202020;
     height: 2%;
     font-size: 150%;
 }
+
 .precioProductos {
     font-weight: 900;
     color: #5fc24c;
 }
+
 .pProductos {
     font-weight: 300;
     color: #202020;
 }
+
 .botonComprar {
     display: block;
     font-family: 'Fredoka One', sans-serif;
@@ -391,99 +449,20 @@ audio {
     padding: 0.5% 10% 0.7% 10%;
     margin-bottom: 0.625em;
 }
+
 .botonComprar:hover {
     background: #26f8f1;
     text-decoration: none;
 }
+
 .botonComprar:active {
     background: #00fff7;
 }
-@media (max-width: 1255px) {
-    .producto {
-        width: 45%;
-    }
-    .form {
-        width: 80%;
-    }
-    .botonMenu {
-        font-size: 5vw;
-    }
-}
-@media (max-width: 630px) {
-    .producto {
-        width: 90%;
-    }
-    .form {
-        width: 100%;
-    }
-    .botonMenu {
-        font-size: 4vw;
-    }
-    .form-button {
-        width: 100%;
-    }
-}
-.barraDeNavegacionfixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
-}
-.mainfixed {
-    margin-top: 50px;
-}
-.barraDeNavegacion {
-    background: #3fb6b2;
-    display: flex;
-    justify-content: center;
-    transition: all linear 0.3s;
-    -webkit-transition: all linear 0.3s;
-    -moz-transition: all linear 0.3s;
-    -o-transition: all linear 0.3s;
-}
-.elementoDeNavegacion {
-    display: inline-block;
-    text-decoration: none;
-    background: #3fb6b2;
-    color: #fff;
-    font-size: 3.5vw;
-    margin: 0 1vw;
-}
-.elementoDeNavegacion:hover {
-    background: #28ec01;
-    color: #3fb6b2;
-    text-decoration: none;
-}
-.elementoDeNavegacion:active {
-    background: #33ff00;
-    color: #3fb6b2;
-}
-.botonMenu {
-    background: #3fb6b2;
-    color: #fff;
-    margin: 1% 0;
-    border: 0;
-    display: none;
-}
-@media (max-width: 740px) {
-    .barraDeNavegacion {
-        text-align: center;
-        flex-direction: column;
-    }
-    .elementoDeNavegacion {
-        margin: 0.625em 0;
-    }
-    .botonMenu {
-        display: inline-block;
-    }
-    .desaparece {
-        display: none;
-    }
-}
+
 .calculadora {
     margin: 2vw 0 0 0;
 }
+
 .btn-container {
     display: flex;
     flex-wrap: wrap;
@@ -492,6 +471,7 @@ audio {
     justify-content: center;
     align-items: center;
 }
+
 .btn-calc {
     background: grey;
     color: lightskyblue;
@@ -504,14 +484,17 @@ audio {
     border-radius: 0.3125em;
     box-shadow: 0.3125em 0.3125em 0.3125em #333;
 }
+
 .btn-calc:hover {
     background: rgb(185, 76, 76);
     color: rgb(36, 127, 184);
 }
+
 .btn-calc:active {
     background: rgb(255, 1, 1);
     color: rgb(0, 151, 245);
 }
+
 #resultado-calc {
     color: lightskyblue;
     text-align: center;
@@ -524,23 +507,62 @@ audio {
     border-radius: 0.3125em;
     box-shadow: 0.3125em 0.3125em 0.3125em #333;
 }
+
+.barraDeNavegacionfixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+}
+
+.mainfixed {
+    margin-top: 50px;
+}
+
+.barraDeNavegacion {
+    background: #3fb6b2;
+    display: flex;
+    justify-content: center;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+
+.elementoDeNavegacion {
+    display: inline-block;
+    text-decoration: none;
+    background: #3fb6b2;
+    color: #fff;
+    font-size: 3.5vw;
+    margin: 0 1vw;
+}
+
+.elementoDeNavegacion:hover {
+    background: #28ec01;
+    color: #3fb6b2;
+    text-decoration: none;
+}
+
+.elementoDeNavegacion:active {
+    background: #33ff00;
+    color: #3fb6b2;
+}
+
+.botonMenu {
+    background: #3fb6b2;
+    color: #fff;
+    margin: 1% 0;
+    border: 0;
+    display: none;
+}
+
 .whatsapp_container {
     position: fixed;
     bottom: 2vw;
     right: 2vw;
     z-index: 1;
-}
-
-.whatsapp_close {
-    position: relative;
-    top: -2.3vw;
-    color: rgba(0, 100, 0, 0.5);
-}
-.whatsapp_close:hover {
-    color: rgba(10, 185, 10, 0.7);
-}
-.whatsapp_close:active {
-    color: rgba(20, 255, 20, 1);
 }
 
 .whatsapp_logo {
@@ -561,3 +583,164 @@ audio {
     height: 5vw;
     border: 5px solid rgb(0, 255, 42);
 }
+
+.whatsapp_close {
+    position: relative;
+    top: -2.3vw;
+    color: rgba(0, 100, 0, 0.5);
+}
+
+.whatsapp_close:hover {
+    color: rgba(10, 185, 10, 0.7);
+}
+
+.whatsapp_close:active {
+    color: rgba(20, 255, 20, 1);
+}
+
+@media screen and (max-width: 1255px) {
+    .producto {
+        width: 45%;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .botonMenu {
+        font-size: 5vw;
+    }
+
+    .whatsapp_logo {
+        width: 4vw;
+        height: 4vw;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+
+    .whatsapp_logo:hover {
+        width: 6vw;
+        height: 6vw;
+        border: 4px solid #fff;
+    }
+
+    .whatsapp_logo:active {
+        width: 8vw;
+        height: 8vw;
+        border: 5px solid rgb(0, 255, 42);
+    }
+
+    .whatsapp_close {
+        position: relative;
+        top: -3vw;
+        color: rgba(0, 100, 0, 0.5);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .barraDeNavegacion {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .elementoDeNavegacion {
+        margin: 0.625em 0;
+    }
+
+    .botonMenu {
+        display: inline-block;
+    }
+
+    .desaparece {
+        display: none;
+    }
+
+    .whatsapp_logo {
+        width: 7vw;
+        height: 7vw;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+
+    .whatsapp_logo:hover {
+        width: 10vw;
+        height: 10vw;
+        border: 4px solid #fff;
+    }
+
+    .whatsapp_logo:active {
+        width: 12vw;
+        height: 12vw;
+        border: 5px solid rgb(0, 255, 42);
+    }
+
+    .whatsapp_close {
+        position: relative;
+        top: -5vw;
+        color: rgba(0, 100, 0, 0.5);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .producto {
+        width: 90%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .botonMenu {
+        font-size: 4vw;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+
+    .columna {
+        width: 95%;
+    }
+
+    .padreColumnas {
+        flex-direction: column;
+    }
+
+    audio,
+    iframe {
+        width: 100%;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+
+    .whatsapp_logo {
+        width: 9vw;
+        height: 9vw;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+
+    .whatsapp_logo:hover {
+        width: 12vw;
+        height: 12vw;
+        border: 4px solid #fff;
+    }
+
+    .whatsapp_logo:active {
+        width: 15vw;
+        height: 15vw;
+        border: 5px solid rgb(0, 255, 42);
+    }
+
+    .whatsapp_close {
+        position: relative;
+        top: -6vw;
+        color: rgba(0, 100, 0, 0.5);
+    }
+}
+
+/*@media screen and (max-width: 400px) {
+    
+}*/
