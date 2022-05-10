@@ -1,3 +1,4 @@
+// Document Object Model
 let header_content = `<!-- LOGO A LA IZQUIERDA y NOMBRE DE EMPRESA CON LETRA GRANDE Y PERSONALIZADA -->
 <span class="animate__animated animate__backInLeft logo-img">
 </span>
@@ -27,6 +28,23 @@ document.getElementById("idheader").innerHTML = header_content;
 document.getElementById("idnavbar").innerHTML = navbar_content;
 document.getElementById("idfooter").innerHTML = footer_content;
 
+// DOM PARA WHATSAPP FIXED
+let whatsapp_div = document.createElement('div');
+whatsapp_div.classList.add('whatsapp_container');
+let whatsapp_contact = document.createElement('a');
+whatsapp_contact.classList.add('whatsapp_contact');
+whatsapp_contact.setAttribute('target', '_blank');
+whatsapp_contact.setAttribute('href', 'https://web.whatsapp.com/send?phone=5493624068392&amp;text=Hola, tengo una consulta');
+let whatsapp_logo = document.createElement('img');
+whatsapp_logo.classList.add('whatsapp_logo');
+whatsapp_logo.setAttribute('src', '../img/iconos/whatsapp.png');
+whatsapp_logo.setAttribute('alt', 'whatsapp');
+whatsapp_logo.setAttribute('title', 'Whatsapp');
+whatsapp_contact.appendChild(whatsapp_logo);
+whatsapp_div.appendChild(whatsapp_contact);
+document.body.appendChild(whatsapp_div);
+
+// SCRIPT PARA EL MENÚ
 function accion() {
     let menuElemento = document.getElementsByClassName('elementoDeNavegacion');
     for (let i = 0; i < menuElemento.length; i++) {
@@ -34,18 +52,22 @@ function accion() {
     }
 }
 let altura = $('.barraDeNavegacion').offset().top;
-$(window).on("scroll", function () {
-    if ($(window).scrollTop() > altura) {
-        $(".barraDeNavegacion").addClass("barraDeNavegacionfixed");
-        $("main").addClass("mainfixed");
-        $(".barraDeNavegacion").addClass("animate__fadeInDown");
-        $(".barraDeNavegacion").removeClass("animate__fadeInUp");
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > altura) {
+            $(".barraDeNavegacion").addClass("barraDeNavegacionfixed");
+            $("main").addClass("mainfixed");
+            $(".barraDeNavegacion").addClass("animate__fadeInDown");
+            $(".barraDeNavegacion").removeClass("animate__fadeInUp");
+        }
+        else {
+            $(".barraDeNavegacion").removeClass("barraDeNavegacionfixed");
+            $("main").removeClass("mainfixed");
+            $(".barraDeNavegacion").removeClass("animate__fadeInDown");
+            $(".barraDeNavegacion").addClass("animate__fadeInUp");
+        }
     }
-    else {
-        $(".barraDeNavegacion").removeClass("barraDeNavegacionfixed");
-        $("main").removeClass("mainfixed");
-        $(".barraDeNavegacion").removeClass("animate__fadeInDown");
-        $(".barraDeNavegacion").addClass("animate__fadeInUp");
-    }
-}
 );
+
+// SCRIPT PARA BAJAR EL VOLUMEN INICIAL DE LOS AUDIOS
+var audio = document.getElementById("playAudio");
+audio.volume = 0.1;
