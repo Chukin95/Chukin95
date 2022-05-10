@@ -85,6 +85,7 @@ html, body {
 main {
     text-align: center;
     margin: 0 5%;
+    min-height: 25vw;
 }
 .logo-img {
     display: inline;
@@ -232,10 +233,15 @@ hr {
     height: 2px;
     background: #f36f48;
 }
-iframe, audio {
+iframe {
     display: block;
     margin: 0 auto;
     width: 80%;
+}
+audio {
+    display: block;
+    margin: 1vw auto;
+    width: 40%;
 }
 .submit {
     background-color: #3fb6b2;
@@ -474,4 +480,72 @@ iframe, audio {
     .desaparece {
         display: none;
     }
+}
+.calculadora {
+    margin: 2vw 0 0 0;
+}
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30vw;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.btn-calc {
+    background: grey;
+    color: lightskyblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 2vw;
+    margin: 10px 10px;
+    padding: 10px 50px 10px 50px;
+    width: 10%;
+    border-radius: 0.3125em;
+    box-shadow: 0.3125em 0.3125em 0.3125em #333;
+}
+.btn-calc:hover {
+    background: rgb(185, 76, 76);
+    color: rgb(36, 127, 184);
+}
+.btn-calc:active {
+    background: rgb(255, 1, 1);
+    color: rgb(0, 151, 245);
+}
+#resultado-calc {
+    color: lightskyblue;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    font-size: 1.5vw;
+    background: grey;
+    margin: 10px 36.5vw;
+    padding: 20px 15vw 20px 1vw;
+    border-radius: 0.3125em;
+    box-shadow: 0.3125em 0.3125em 0.3125em #333;
+}
+.whatsapp_container {
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    z-index: 1;
+}
+
+.whatsapp_logo {
+    width: 3vw;
+    height: 3vw;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.whatsapp_logo:hover {
+    width: 4vw;
+    height: 4vw;
+    border: 4px solid #fff;
+}
+
+.whatsapp_logo:active {
+    width: 5vw;
+    height: 5vw;
+    border: 5px solid rgb(0, 255, 42);
 }

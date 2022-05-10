@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index,follow">
+        <title>CeBra Phone - Calculadora</title>
+        <meta name="description" content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
+        <meta name="keywords" content="Celulares, Accesorios, Iphone, Apple, Xiaomi">
+        <meta name="author" content="Cristian Gomez">
+        <meta name="copyright" content="Cristian Gomez">
+        <link rel="icon" href="img/favicon.ico" type="image/ico">
+
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/e2ad0f9888.js" crossorigin="anonymous"></script>
+
+        <!-- CSS -->
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Javascript -->
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        
+    </head>
+
+    <body>
+        <header id="idheader"></header>
+        <nav id="idnavbar" class="barraDeNavegacion animate__animated animate__faster"></nav>
+
+        <main>
+            <h1 class="animate__animated animate__flipInY">CALCULADORA:</h1>
+            
+            <div class="calculadora">
+                <label class="form-text" for="Num1">Num1: </label><input id="Num1" size="40" type="text" name="Num1" placeholder="Ingrese un número...">
+                <br><br>
+                <label class="form-text" for="Num2">Num2: </label><input id="Num2" size="40" type="text" name="Num2" placeholder="Ingrese otro número...">
+                <br><br>
+                <div class="btn-container">
+                    <p class="btn-calc" onclick="sumar()"> + </p>
+                    <p class="btn-calc" onclick="restar()"> - </p>
+                    <p class="btn-calc" onclick="multiplicar()"> * </p>
+                    <p class="btn-calc" onclick="dividir()"> / </p>
+                    <p class="btn-calc" onclick="borrar()"> AC </p>    
+                </div>
+                <br>
+                <p>RESULTADO: </p>
+                <p id="resultado-calc"> 00 </p>      
+            </div>
+
+            <audio id="playAudio" controls autoplay loop>
+                <source src="./audio/selfcontrol.ogg" type="audio/ogg">
+            </audio>
+        </main>
+        
+        <footer id="idfooter"></footer>
+        <script src="./js/main.js"></script>
+        <script src="./js/calculadora.js"></script>
+    </body>
+</html>
