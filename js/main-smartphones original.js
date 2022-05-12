@@ -30,6 +30,7 @@ document.getElementById("idfooter").innerHTML = footer_content;
 
 // DOM PARA WHATSAPP FIXED
 let whatsapp_div = document.createElement('div');
+whatsapp_div.setAttribute('id', 'whatsapp_div');
 whatsapp_div.classList.add('whatsapp_container');
 let whatsapp_contact = document.createElement('a');
 whatsapp_contact.classList.add('whatsapp_contact');
