@@ -1,38 +1,41 @@
 let turnoPlayer = 1;
-let puntosPlayer1 = 0;
-let puntosPlayer2 = 0;
 nuevo()
 
 function presiona(id) {
     if (!botonOcupado(id)) {
-        if (turnoPlayer == 1) {
-            let boton = document.getElementById(id);
-            boton.innerHTML = "X";
-            boton.setAttribute('style', 'background-color: red');
-            cambioJugador();
-            puntosPlayer1 += parseInt(id);
-        } else if (turnoPlayer == 2) {
-            let boton = document.getElementById(id);
-            boton.innerHTML = "O";
-            boton.setAttribute('style', 'background-color: blue');
-            cambioJugador();
-            puntosPlayer2 += parseInt(id);
+        if (buscarGanador()) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Alguien ya ganó la partida!',
+                footer: '<a href="">Por qué veo este error?</a>'
+            });
+        } else {
+            if (turnoPlayer == 1) {
+                let boton = document.getElementById(id);
+                boton.innerHTML = "X";
+                boton.setAttribute('style', 'background-color: red');
+                cambioJugador();
+            } else if (turnoPlayer == 2) {
+                let boton = document.getElementById(id);
+                boton.innerHTML = "O";
+                boton.setAttribute('style', 'background-color: blue');
+                cambioJugador();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Ese lugar ya está ocupado!',
+                    footer: '<a href="">Por qué veo este error?</a>'
+                });
+            }
         }
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Ese lugar ya está ocupado!',
-            footer: '<a href="">Por qué veo este error?</a>'
-          });
+        buscarGanador();
     }
-    buscarGanador();
 }
 
 function nuevo() {
     turnoPlayer = 1;
-    puntosPlayer1 = 0;
-    puntosPlayer2 = 0;
     botonNuevo = document.getElementById("new");
     botonNuevo.setAttribute('style', 'background-color: grey');
     display = document.getElementById("display-tateti")
@@ -67,7 +70,7 @@ function botonOcupado(id) {
 }
 
 function cambioJugador() {
-display = document.getElementById("display-tateti");
+    display = document.getElementById("display-tateti");
     if (turnoPlayer == 1) {
         turnoPlayer = 2;
         display.innerHTML = "Turno del jugador 2";
@@ -79,6 +82,7 @@ display = document.getElementById("display-tateti");
     }
 }
 function buscarGanador() {
+    display = document.getElementById("display-tateti");
     boton11 = document.getElementById("11");
     boton12 = document.getElementById("12");
     boton13 = document.getElementById("13");
@@ -89,22 +93,30 @@ function buscarGanador() {
     boton32 = document.getElementById("32");
     boton33 = document.getElementById("33");
     if (boton11.textContent == "X" && boton12.textContent == "X" && boton13.textContent == "X"
-     || boton21.textContent == "X" && boton22.textContent == "X" && boton23.textContent == "X"
-     || boton31.textContent == "X" && boton32.textContent == "X" && boton33.textContent == "X"
-     || boton11.textContent == "X" && boton21.textContent == "X" && boton31.textContent == "X"
-     || boton12.textContent == "X" && boton22.textContent == "X" && boton32.textContent == "X"
-     || boton13.textContent == "X" && boton23.textContent == "X" && boton33.textContent == "X"
-     || boton11.textContent == "X" && boton22.textContent == "X" && boton33.textContent == "X"
-     || boton13.textContent == "X" && boton22.textContent == "X" && boton31.textContent == "X") {
+        || boton21.textContent == "X" && boton22.textContent == "X" && boton23.textContent == "X"
+        || boton31.textContent == "X" && boton32.textContent == "X" && boton33.textContent == "X"
+        || boton11.textContent == "X" && boton21.textContent == "X" && boton31.textContent == "X"
+        || boton12.textContent == "X" && boton22.textContent == "X" && boton32.textContent == "X"
+        || boton13.textContent == "X" && boton23.textContent == "X" && boton33.textContent == "X"
+        || boton11.textContent == "X" && boton22.textContent == "X" && boton33.textContent == "X"
+        || boton13.textContent == "X" && boton22.textContent == "X" && boton31.textContent == "X") {
         Swal.fire('Ganó el jugador 1!');
+        display.innerHTML = "¡Ganó el jugador 1!";
+        display.setAttribute('style', 'background-color: red');
+        return true;
     } else if (boton11.textContent == "O" && boton12.textContent == "O" && boton13.textContent == "O"
-     || boton21.textContent == "O" && boton22.textContent == "O" && boton23.textContent == "O"
-     || boton31.textContent == "O" && boton32.textContent == "O" && boton33.textContent == "O"
-     || boton11.textContent == "O" && boton21.textContent == "O" && boton31.textContent == "O"
-     || boton12.textContent == "O" && boton22.textContent == "O" && boton32.textContent == "O"
-     || boton13.textContent == "O" && boton23.textContent == "O" && boton33.textContent == "O"
-     || boton11.textContent == "O" && boton22.textContent == "O" && boton33.textContent == "O"
-     || boton13.textContent == "O" && boton22.textContent == "O" && boton31.textContent == "O") {
+        || boton21.textContent == "O" && boton22.textContent == "O" && boton23.textContent == "O"
+        || boton31.textContent == "O" && boton32.textContent == "O" && boton33.textContent == "O"
+        || boton11.textContent == "O" && boton21.textContent == "O" && boton31.textContent == "O"
+        || boton12.textContent == "O" && boton22.textContent == "O" && boton32.textContent == "O"
+        || boton13.textContent == "O" && boton23.textContent == "O" && boton33.textContent == "O"
+        || boton11.textContent == "O" && boton22.textContent == "O" && boton33.textContent == "O"
+        || boton13.textContent == "O" && boton22.textContent == "O" && boton31.textContent == "O") {
         Swal.fire('Ganó el jugador 2');
+        display.innerHTML = "¡Ganó el jugador 2!";
+        display.setAttribute('style', 'background-color: blue');
+        return true;
+    } else {
+        return false;
     }
 }
