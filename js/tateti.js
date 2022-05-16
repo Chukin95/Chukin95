@@ -97,7 +97,6 @@ function buscarGanador() {
      || boton11.textContent == "X" && boton22.textContent == "X" && boton33.textContent == "X"
      || boton13.textContent == "X" && boton22.textContent == "X" && boton31.textContent == "X") {
         Swal.fire('Ganó el jugador 1!');
-        nuevo();
     } else if (boton11.textContent == "O" && boton12.textContent == "O" && boton13.textContent == "O"
      || boton21.textContent == "O" && boton22.textContent == "O" && boton23.textContent == "O"
      || boton31.textContent == "O" && boton32.textContent == "O" && boton33.textContent == "O"
@@ -107,6 +106,5 @@ function buscarGanador() {
      || boton11.textContent == "O" && boton22.textContent == "O" && boton33.textContent == "O"
      || boton13.textContent == "O" && boton22.textContent == "O" && boton31.textContent == "O") {
         Swal.fire('Ganó el jugador 2');
-        nuevo();
     }
 }
