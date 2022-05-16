@@ -21,16 +21,17 @@ function presiona(id) {
                 boton.innerHTML = "O";
                 boton.setAttribute('style', 'background-color: blue');
                 cambioJugador();
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Ese lugar ya está ocupado!',
-                    footer: '<a href="">Por qué veo este error?</a>'
-                });
             }
         }
         buscarGanador();
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Ese lugar ya está ocupado!',
+            footer: '<a href="">Por qué veo este error?</a>'
+        });
     }
 }
 
