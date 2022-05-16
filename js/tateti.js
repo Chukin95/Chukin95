@@ -38,11 +38,32 @@ function presiona(id) {
         }
     }
     else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Ese lugar ya está ocupado!'
-        });
+        if (buscarGanador(false)) {
+            Swal.fire({
+                title: 'Alguien ya ganó la partida!',
+                text: "¿Deseas empezar una nueva partida?",
+                icon: 'error',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Reiniciar!',
+                cancelButtonText: 'No, Cancelar!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Reiniciando!',
+                        'Has reiniciado la partida!',
+                        'success')
+                    nuevo(true);
+                }
+            })
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Ese lugar ya está ocupado!'
+            });
+        }
     }
 }
 
