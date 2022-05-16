@@ -71,6 +71,7 @@ function nuevo(conMensaje = true) {
     turnoPlayer = 1;
     botonNuevo = document.getElementById("new");
     botonNuevo.setAttribute('style', 'background-color: grey');
+    botonNuevo.textContent = "Reiniciar";
     display = document.getElementById("display-tateti")
     display.innerHTML = "Turno del jugador 1";
     display.setAttribute('style', 'background-color: red');
