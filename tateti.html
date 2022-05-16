@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index,follow">
-        <title>CeBra Phone - Ni idea</title>
+        <title>CeBra Phone - Ta te ti</title>
         <meta name="description" content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
         <meta name="keywords" content="Celulares, Accesorios, Iphone, Apple, Xiaomi">
         <meta name="author" content="Cristian Gomez">
@@ -22,6 +22,7 @@
 
         <!-- Javascript -->
         <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/jquery-3.6.0.min.js"></script>
         
     </head>
@@ -31,15 +32,33 @@
         <nav id="idnavbar" class="barraDeNavegacion animate__animated animate__faster"></nav>
 
         <main>
-            <h1 class="animate__animated animate__flipInY">Ni idea:</h1>
-            <h2>Ni idea:</h2>
+            <h1 class="animate__animated animate__flipInY">TA-TE-TI:</h1>
 
-            <audio id="playAudio" controls autoplay loop>
-                <source src="./audio/selfcontrol.ogg" type="audio/ogg">
-            </audio>
+            <button class="btn-tateti" id="new" onclick="nuevo()">NEW</button>
+
+            <div class="fila-tateti">
+                <button class="btn-tateti" id="11" onclick="presiona('11')">-</button>
+                <button class="btn-tateti" id="12" onclick="presiona('12')">-</button>
+                <button class="btn-tateti" id="13" onclick="presiona('13')">-</button>
+            </div>
+
+            <div class="fila-tateti">
+                <button class="btn-tateti" id="21" onclick="presiona('21')">-</button>
+                <button class="btn-tateti" id="22" onclick="presiona('22')">-</button>
+                <button class="btn-tateti" id="23" onclick="presiona('23')">-</button>
+            </div>
+
+            <div class="fila-tateti">
+                <button class="btn-tateti" id="31" onclick="presiona('31')">-</button>
+                <button class="btn-tateti" id="32" onclick="presiona('32')">-</button>
+                <button class="btn-tateti" id="33" onclick="presiona('33')">-</button>
+            </div>
+
+            <p class="display-tateti" id="display-tateti">Turno del jugador 1</p>
         </main>
         
         <footer id="idfooter"></footer>
         <script src="./js/main.js"></script>
+        <script src="./js/tateti.js"></script>
     </body>
 </html>
