@@ -177,6 +177,7 @@ function buscarGanador(conGanador) {
             display.innerHTML = "¡Empate!";
             display.setAttribute('style', 'background-color: grey');
         }
+        return true;
     }
     else {
         return false;
