@@ -3,12 +3,11 @@ nuevo()
 
 function presiona(id) {
     if (!botonOcupado(id)) {
-        if (buscarGanador()) {
+        if (buscarGanador(false)) {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Alguien ya ganó la partida!',
-                footer: '<a href="">Por qué veo este error?</a>'
+                text: 'Alguien ya ganó la partida!'
             });
         } else {
             if (turnoPlayer == 1) {
@@ -22,15 +21,14 @@ function presiona(id) {
                 boton.setAttribute('style', 'background-color: blue');
                 cambioJugador();
             }
+            buscarGanador(true);
         }
-        buscarGanador();
     }
     else {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Ese lugar ya está ocupado!',
-            footer: '<a href="">Por qué veo este error?</a>'
+            text: 'Ese lugar ya está ocupado!'
         });
     }
 }
@@ -82,7 +80,7 @@ function cambioJugador() {
         display.setAttribute('style', 'background-color: red');
     }
 }
-function buscarGanador() {
+function buscarGanador(conGanador) {
     display = document.getElementById("display-tateti");
     boton11 = document.getElementById("11");
     boton12 = document.getElementById("12");
@@ -101,7 +99,9 @@ function buscarGanador() {
         || boton13.textContent == "X" && boton23.textContent == "X" && boton33.textContent == "X"
         || boton11.textContent == "X" && boton22.textContent == "X" && boton33.textContent == "X"
         || boton13.textContent == "X" && boton22.textContent == "X" && boton31.textContent == "X") {
-        Swal.fire('Ganó el jugador 1!');
+        if (conGanador) {
+            Swal.fire('Ganó el jugador 1!');
+        }
         display.innerHTML = "¡Ganó el jugador 1!";
         display.setAttribute('style', 'background-color: red');
         return true;
@@ -113,7 +113,9 @@ function buscarGanador() {
         || boton13.textContent == "O" && boton23.textContent == "O" && boton33.textContent == "O"
         || boton11.textContent == "O" && boton22.textContent == "O" && boton33.textContent == "O"
         || boton13.textContent == "O" && boton22.textContent == "O" && boton31.textContent == "O") {
-        Swal.fire('Ganó el jugador 2');
+        if (conGanador) {
+            Swal.fire('Ganó el jugador 2');
+        }
         display.innerHTML = "¡Ganó el jugador 2!";
         display.setAttribute('style', 'background-color: blue');
         return true;
