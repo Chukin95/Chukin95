@@ -4,11 +4,46 @@ nuevo(false)
 function presiona(id) {
     if (!botonOcupado(id)) {
         if (buscarGanador(false)) {
-            Swal.fire({
+            /*Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Alguien ya ganó la partida!'
-            });
+            });*/
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                  confirmButton: 'btn btn-success',
+                  cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: true
+              })
+              
+              swalWithBootstrapButtons.fire({
+                title: 'Oops...',
+                text: "Alguien ya ganó la partida!, ¿Deseas empezar una nueva partida?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Si, reinciar!',
+                cancelButtonText: 'No, cancelar!',
+                reverseButtons: true
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  swalWithBootstrapButtons.fire(
+                    'Reiniciando!',
+                    'Has reiniciado la partida!',
+                    'success'
+                  )
+                    nuevo(true);
+                } else if (
+                  /* Read more about handling dismissals below */
+                  result.dismiss === Swal.DismissReason.cancel
+                ) {
+                  swalWithBootstrapButtons.fire(
+                    'Cancelado',
+                    'Has cancelado reiniciar la partida',
+                    'error'
+                  )
+                }
+              })
         } else {
             if (turnoPlayer == 1) {
                 let boton = document.getElementById(id);
