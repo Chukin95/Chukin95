@@ -4,46 +4,24 @@ nuevo(false)
 function presiona(id) {
     if (!botonOcupado(id)) {
         if (buscarGanador(false)) {
-            /*Swal.fire({
+            Swal.fire({
+                title: 'Alguien ya ganó la partida!',
+                text: "¿Deseas empezar una nueva partida?",
                 icon: 'error',
-                title: 'Oops...',
-                text: 'Alguien ya ganó la partida!'
-            });*/
-            const swalWithBootstrapButtons = Swal.mixin({
-                customClass: {
-                  confirmButton: 'btn btn-success',
-                  cancelButton: 'btn btn-danger'
-                },
-                buttonsStyling: true
-              })
-              
-              swalWithBootstrapButtons.fire({
-                title: 'Oops...',
-                text: "Alguien ya ganó la partida!, ¿Deseas empezar una nueva partida?",
-                icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Si, reinciar!',
-                cancelButtonText: 'No, cancelar!',
-                reverseButtons: true
-              }).then((result) => {
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Reiniciar!',
+                cancelButtonText: 'No, Cancelar!'
+            }).then((result) => {
                 if (result.isConfirmed) {
-                  swalWithBootstrapButtons.fire(
-                    'Reiniciando!',
-                    'Has reiniciado la partida!',
-                    'success'
-                  )
+                    Swal.fire(
+                        'Reiniciando!',
+                        'Has reiniciado la partida!',
+                        'success')
                     nuevo(true);
-                } else if (
-                  /* Read more about handling dismissals below */
-                  result.dismiss === Swal.DismissReason.cancel
-                ) {
-                  swalWithBootstrapButtons.fire(
-                    'Cancelado',
-                    'Has cancelado reiniciar la partida',
-                    'error'
-                  )
                 }
-              })
+            })
         } else {
             if (turnoPlayer == 1) {
                 let boton = document.getElementById(id);
@@ -114,7 +92,7 @@ function cambioJugador() {
     display = document.getElementById("display-tateti");
     if (turnoPlayer == 1) {
         turnoPlayer = 2;
-        display.innerHTML = "Turno del jugador 2";9
+        display.innerHTML = "Turno del jugador 2"; 9
         display.setAttribute('style', 'background-color: blue');
     } else if (turnoPlayer == 2) {
         turnoPlayer = 1;
@@ -142,7 +120,10 @@ function buscarGanador(conGanador) {
         || boton1.textContent == "X" && boton5.textContent == "X" && boton9.textContent == "X"
         || boton3.textContent == "X" && boton5.textContent == "X" && boton7.textContent == "X") {
         if (conGanador) {
-            Swal.fire('Ganó el jugador 1!');
+            Swal.fire({
+                icon: 'info',
+                title: '¡Ganó el jugador 1!'
+            })
         }
         display.innerHTML = "¡Ganó el jugador 1!";
         display.setAttribute('style', 'background-color: red');
@@ -156,12 +137,25 @@ function buscarGanador(conGanador) {
         || boton1.textContent == "O" && boton5.textContent == "O" && boton9.textContent == "O"
         || boton3.textContent == "O" && boton5.textContent == "O" && boton7.textContent == "O") {
         if (conGanador) {
-            Swal.fire('Ganó el jugador 2');
+            Swal.fire({
+                icon: 'info',
+                title: '¡Ganó el jugador 2!'
+            })
         }
         display.innerHTML = "¡Ganó el jugador 2!";
         display.setAttribute('style', 'background-color: blue');
         return true;
-    } else {
+    } else if (boton1.textContent != "-" && boton2.textContent != "-" && boton3.textContent != "-"
+        && boton4.textContent != "-" && boton5.textContent != "-" && boton6.textContent != "-"
+        && boton7.textContent != "-" && boton8.textContent != "-" && boton9.textContent != "-") {
+        if (conGanador) {
+            Swal.fire({
+                icon: 'info',
+                title: '¡Empate!'
+            })
+        }
+    }
+    else {
         return false;
     }
 }
