@@ -153,6 +153,8 @@ function buscarGanador(conGanador) {
                 icon: 'info',
                 title: '¡Empate!'
             })
+            display.innerHTML = "¡Empate!";
+            display.setAttribute('style', 'background-color: grey');
         }
     }
     else {
