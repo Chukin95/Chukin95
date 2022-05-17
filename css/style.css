@@ -98,7 +98,9 @@ col-12 {
 body {
     background-image: url(../img/background.jpg);
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    
     /*transform:rotate(90deg);
     -ms-transform:rotate(90deg);  IE 9 
     -webkit-transform:rotate(90deg);  Opera, Chrome, and Safari */
