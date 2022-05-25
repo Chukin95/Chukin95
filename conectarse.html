@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index,follow">
-        <title>CeBra Phone - Registro</title>
+        <title>CeBra Phone - Conectarse</title>
         <meta name="description" content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
         <meta name="keywords" content="Celulares, Accesorios, Iphone, Xiaomi">
         <meta name="author" content="Cristian Gomez">
@@ -22,6 +22,7 @@
 
         <!-- Javascript -->
         <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/jquery-3.6.0.min.js"></script>
         
     </head>
@@ -33,10 +34,10 @@
         <main>
             <h1 class="animate__animated animate__flipInY">CONECTARSE:</h1>
             <div class="form-container">
-                <form class="form" action="show_data.html" target="_blank">
+                <form class="form" id="conectarse" action="show_data.html" target="_blank">
                     <h2>INGRESE:</h2>
-                    <label class="form-text" for="correo">Correo Eléctronico: </label><input type="email" name="Correo" id="correo" required placeholder="Ingrese su correo eléctronico...">
-                    <label class="form-text" for="clave">Contraseña: </label><input type="password" name="clave" placeholder="Ingrese su contraseña...">
+                    <label class="form-text" for="usuario">Usuario: </label><input type="text" name="usuario" id="usuario" required placeholder="Ingrese su usuario...">
+                    <label class="form-text" for="clave">Contraseña: </label><input type="password" name="clave" id="clave" placeholder="Ingrese su contraseña...">
                     <br>
                     <button class="form-button" type="submit" value="Enviar">Entrar</button>
                     <a href="./registro.html">Registrarse</a>
@@ -48,5 +49,6 @@
 
         <footer id="idfooter"></footer>
         <script src="./js/main.js"></script>
+        <script src="./js/validacion.js"></script>
     </body>
 </html>

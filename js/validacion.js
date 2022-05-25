@@ -1,4 +1,42 @@
-// Se obtiene el elemento form del html
+// Validación de Conectarse:
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("conectarse").addEventListener('submit', validarFormulario);
+});
+
+function validarFormulario(evento) {
+  evento.preventDefault();
+  let usuario = document.getElementById('usuario').value;
+  let clave = document.getElementById('clave').value;
+  if (usuario.length == 0) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'No has escrito nada en el usuario!'
+    });
+    return;
+  } else if (usuario.length <= 4) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Tu usuario es demasiado corto!'
+    });
+    return;
+  } else if (clave.length < 8) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'La clave no es válida!'
+    });
+    return;
+  } else {
+    function isValid(element) {
+    return element !== '' && element !== null;
+    }
+  }
+  this.submit();
+}
+
+/*// Se obtiene el elemento form del html
 const form = document.getElementById("registro");
 
 form.addEventListener("submit", (e) => {
@@ -6,7 +44,7 @@ form.addEventListener("submit", (e) => {
   // Se obtienen todos los valores de los inputs que interesan validar
   const nombre = document.getElementById("nombre").value;
   const apellido = document.getElementById("apellido").value;
-  const email = document.getElementById("correo").value;
+  const correo = document.getElementById("correo").value;
   const localidad = document.getElementById("localidad").value;
   const asunto = document.getElementById("asunto").value;
   const comentario = document.getElementById("comentario").value;
@@ -25,15 +63,15 @@ form.addEventListener("submit", (e) => {
     MENSAJES.push("*Por favor, introduzca un apellido válido");
   }
 
-  if (!isValid(email)) {
+  if (!isValid(correo)) {
     MENSAJES.push("*Por favor, introduzca su correo electrónico");
   }
 
-  if (!email.includes("@")) {
+  if (!correo.includes("@")) {
     MENSAJES.push("*La dirección de correo electrónico debe contener @");
   }
 
-  if (email.includes('.com')) {
+  if (correo.includes('.com')) {
       MENSAJES.push("*La dirección de correo electrónico debe pertenecer a un dominio válido (.com, .ar)");
   };
 
@@ -60,4 +98,4 @@ form.addEventListener("submit", (e) => {
 // Esta funcion comprueba que los inputs no se envíen en blanco/nulos
 function isValid(element) {
     return element !== '' && element !== null;
-}
+}*/
