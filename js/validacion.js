@@ -1,5 +1,5 @@
 // Se obtiene el elemento form del html
-const form = document.getElementById("contacto");
+const form = document.getElementById("registro");
 
 form.addEventListener("submit", (e) => {
 

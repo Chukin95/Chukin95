@@ -9,7 +9,7 @@ let navbar_content = `<button class="botonMenu" onclick="accion()">MENÚ</button
 <a class="elementoDeNavegacion desaparece" href="productos.html">Productos</a>
 <a class="elementoDeNavegacion desaparece" href="sucursales.html">Sucursales</a>
 <a class="elementoDeNavegacion desaparece" href="contacto.html">Contacto</a>
-<a class="elementoDeNavegacion desaparece" href="conectarse.html">Cuenta</a>
+<a class="elementoDeNavegacion desaparece" href="conectarse.html">Conectarse</a>
 <a class="elementoDeNavegacion desaparece" href="tateti.html">Tateti</a>`;
 
 // <a class="elementoDeNavegacion desaparece" href="contacto.html">CONTACTO</a>
