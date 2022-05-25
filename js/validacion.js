@@ -9,25 +9,31 @@ function validarFormulario(evento) {
   let clave = document.getElementById('clave').value;
   if (usuario.length == 0) {
     Swal.fire({
+      position: 'top-end',
       icon: 'error',
-      title: 'Oops...',
-      text: 'No has escrito nada en el usuario!'
+      title: 'No has escrito nada en el usuario!',
+      showConfirmButton: false,
+      timer: 1000
     });
     document.conectarse.usuario.focus()
     return;
   } else if (usuario.length <= 4) {
     Swal.fire({
+      position: 'top-end',
       icon: 'error',
-      title: 'Oops...',
-      text: 'Tu usuario es demasiado corto!'
+      title: 'Tu usuario es demasiado corto!',
+      showConfirmButton: false,
+      timer: 1000
     });
     document.conectarse.usuario.focus()
     return;
   } else if (clave.length < 8) {
     Swal.fire({
+      position: 'top-end',
       icon: 'error',
-      title: 'Oops...',
-      text: 'La clave no es válida!'
+      title: 'La clave no es válida!',
+      showConfirmButton: false,
+      timer: 1000
     });
     document.conectarse.clave.focus()
     return;
