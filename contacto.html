@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="index,follow">
-        <title>CeBra Phone - Contacto</title>
-        <meta name="description" content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
-        <meta name="keywords" content="Celulares, Accesorios, Iphone, Xiaomi">
-        <meta name="author" content="Cristian Gomez">
-        <meta name="copyright" content="Cristian Gomez">
-        <link rel="icon" href="img/favicon.ico" type="image/ico">
-        
-        <!-- Fontawesome -->
-        <script src="https://kit.fontawesome.com/e2ad0f9888.js" crossorigin="anonymous"></script>
 
-        <!-- CSS -->
-        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <title>CeBra Phone - Contacto</title>
+    <meta name="description"
+        content="Esta página es de una reconicida tienda de celulares ubicada en Resistencia, Chaco.">
+    <meta name="keywords" content="Celulares, Accesorios, Iphone, Xiaomi">
+    <meta name="author" content="Cristian Gomez">
+    <meta name="copyright" content="Cristian Gomez">
+    <link rel="icon" href="img/favicon.ico" type="image/ico">
 
-        <!-- Javascript -->
-        <!-- <script src="js/bootstrap.min.js"></script> -->
-        <script src="js/jquery-3.6.0.min.js"></script>
-        
-    </head>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e2ad0f9888.js" crossorigin="anonymous"></script>
 
-    <body>
-        <header id="idheader"></header>
-        <nav id="idnavbar" class="barraDeNavegacion animate__animated animate__faster"></nav>
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
-        <main>
-            <h1 class="animate__animated animate__flipInY">CONTACTO:</h1>
-            <div class="form-container">
-                <form class="form" action="/show_data.html">
+    <!-- Javascript -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <header id="idheader"></header>
+    <nav id="idnavbar" class="barraDeNavegacion animate__animated animate__faster"></nav>
+
+    <main>
+        <h1 class="animate__animated animate__flipInY">CONTACTO:</h1>
+        <div class="form-container">
+            <form class="form" target="_blank" action="https://formsubmit.co/svpr0@hotmail.com" method="POST">
+                <h2>Llenar formulario de contacto:</h2>
+                <b class="form-text">Nombre: </b><input type="text" name="nombre" class="form-control"
+                    placeholder="Nombre Completo" required>
+                <b class="form-text">Correo: </b><input type="email" name="email" class="form-control"
+                    placeholder="Correo eléctronico" required>
+                <label class="form-text" for="mensaje"><b>Mensaje:</b> </label>
+                <textarea placeholder="Su mensaje" class="form-control" name="mensaje" cols="30" rows="10"
+                    placeholder="Ingrese su mensaje aquí..." required></textarea>
+                <button class="form-button" type="submit" value="Enviar">Enviar</button>
+                <button class="form-button" type="reset" value="Reiniciar">Reiniciar</button>
+            </form>
+        </div>
+        <!-- <div class="form-container">
+            <form class="form" action="/show_data.html">
                     <h2>Llenar formulario de contacto:</h2>
                     <b class="form-text">Nombre: </b><input type="text" name="nombre" placeholder="Ingrese su nombre aquí...">
                     <b class="form-text">Apellido: </b><input type="text" name="apellido" placeholder="Ingrese su apellido aquí...">
@@ -41,27 +57,31 @@
                     <br><label class="form-text" for="motivo"><b>Motivo: </b></label>
                     <input type="text" name="motivo" id="motivo" placeholder="Ingrese su título aquí...">
                     <label class="form-text" for="mensaje"><b>Mensaje:</b> </label>
-                    <br> <!--Salto de linea-->
+                    <br>
                     <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje aquí..."></textarea>
-                    <br> <!--Salto de linea-->
+                    <br>
                     <br>
                     <button class="form-button" type="submit" value="Enviar">Enviar</button>
                     <button class="form-button" type="reset" value="Reiniciar">Reiniciar</button>
-                </form>
-                <br> <!--Salto de linea-->
-                <br> <!--Salto de linea-->
-                <div>
-                    <br>
-                    <h2 id="enviar-correo">Enviar un correo eléctronico:</h2>
-                    <a href="mailto:svpr0@hotmail.com?subject=Titulo de prueba!&body=Esto es el contenido de prueba!">ENVIAR MAIL</a>
-                    <br>
-                    <br>
-                    <br>
-                </div>
-            </div>
-        </main>
+                </form> -->
+        <br>
+        <!--Salto de linea-->
+        <br>
+        <!--Salto de linea-->
+        <div>
+            <br>
+            <h2 id="enviar-correo">Enviar un correo eléctronico:</h2>
+            <a href="mailto:svpr0@hotmail.com?subject=Titulo de prueba!&body=Esto es el contenido de prueba!">ENVIAR
+                MAIL</a>
+            <br>
+            <br>
+            <br>
+        </div>
+        </div>
+    </main>
 
-        <footer id="idfooter"></footer>
-        <script src="./js/main.js"></script>
-    </body>
+    <footer id="idfooter"></footer>
+    <script src="./js/main.js"></script>
+</body>
+
 </html>
