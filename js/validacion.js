@@ -1,3 +1,18 @@
+function alerta(tipo, mensaje) {
+  Swal.fire({
+    position: 'top-end',
+    icon: tipo,
+    title: mensaje,
+    showConfirmButton: false,
+    timer: 1500,
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  });
+}
 // Validación de Conectarse:
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("conectarse").addEventListener('submit', validarFormulario);
@@ -8,33 +23,15 @@ function validarFormulario(evento) {
   let usuario = document.getElementById('usuario').value;
   let clave = document.getElementById('clave').value;
   if (usuario.length == 0) {
-    Swal.fire({
-      position: 'top-end',
-      icon: 'error',
-      title: 'No has escrito nada en el usuario!',
-      showConfirmButton: false,
-      timer: 1000
-    });
+    alerta('error','No has escrito nada en el usuario!');
     document.conectarse.usuario.focus()
     return;
   } else if (usuario.length <= 4) {
-    Swal.fire({
-      position: 'top-end',
-      icon: 'error',
-      title: 'Tu usuario es demasiado corto!',
-      showConfirmButton: false,
-      timer: 1000
-    });
+    alerta('error','Tu usuario es demasiado corto!');
     document.conectarse.usuario.focus()
     return;
   } else if (clave.length < 8) {
-    Swal.fire({
-      position: 'top-end',
-      icon: 'error',
-      title: 'La clave no es válida!',
-      showConfirmButton: false,
-      timer: 1000
-    });
+    alerta('error','La clave no es válida!');
     document.conectarse.clave.focus()
     return;
   } else {
