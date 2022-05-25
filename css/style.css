@@ -33,6 +33,16 @@
     -webkit-box-sizing: border-box;
 }
 
+input,
+optgroup,
+select {
+    margin: 0;
+    height: 2rem;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
 col-1 {
     width: 8.33333%;
 }
@@ -341,7 +351,7 @@ audio {
 }
 
 .form {
-    width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding: 5%;
