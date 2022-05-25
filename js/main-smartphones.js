@@ -5,11 +5,12 @@ let header_content = `<!-- LOGO A LA IZQUIERDA y NOMBRE DE EMPRESA CON LETRA GRA
 <span class="animate__animated animate__bounceInRight logo-text-box">
 </span>`;
 let navbar_content = `<button class="botonMenu" onclick="accion()">MENÚ</button>
-<a class="elementoDeNavegacion desaparece" href="../index.html">INICIO</a>
-<a class="elementoDeNavegacion desaparece" href="../productos.html">PRODUCTOS</a>
-<a class="elementoDeNavegacion desaparece" href="../sucursales.html">SUCURSALES</a>
-<a class="elementoDeNavegacion desaparece" href="../contacto.html">CONTACTO</a>
-<a class="elementoDeNavegacion desaparece" href="../registro.html">REGISTRO</a>`;
+<a class="elementoDeNavegacion desaparece" href="../index.html">Inicio</a>
+<a class="elementoDeNavegacion desaparece" href="../productos.html">Productos</a>
+<a class="elementoDeNavegacion desaparece" href="../sucursales.html">Sucursales</a>
+<a class="elementoDeNavegacion desaparece" href="../contacto.html">Contacto</a>
+<a class="elementoDeNavegacion desaparece" href="../conectarse.html">Conectarse</a>
+<a class="elementoDeNavegacion desaparece" href="../tateti.html">Tateti</a>`;
 let footer_content = `<nav>
 <br><br>
 <a href="https://www.facebook.com/Braianobregonnn" target="_blank"><img src="../img/iconos/facebook.png" alt="facebook" title="Facebook" width="30px" height="30px"></a>
