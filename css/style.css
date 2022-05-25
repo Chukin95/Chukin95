@@ -162,8 +162,9 @@ header {
 
 h1 {
     font-family: 'pricedownblack';
-    font-size: 4.5em;
-    color: rgb(175, 209, 107);
+    font-size: 3rem;
+    color: rgb(206, 206, 206);
+    letter-spacing: 0.3rem;
     text-shadow: 3px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
     margin: 0px -0.3125em -0em -0.3125em;
 }
