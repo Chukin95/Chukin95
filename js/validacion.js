@@ -13,6 +13,7 @@ function validarFormulario(evento) {
       title: 'Oops...',
       text: 'No has escrito nada en el usuario!'
     });
+    document.conectarse.usuario.focus()
     return;
   } else if (usuario.length <= 4) {
     Swal.fire({
@@ -20,6 +21,7 @@ function validarFormulario(evento) {
       title: 'Oops...',
       text: 'Tu usuario es demasiado corto!'
     });
+    document.conectarse.usuario.focus()
     return;
   } else if (clave.length < 8) {
     Swal.fire({
@@ -27,6 +29,7 @@ function validarFormulario(evento) {
       title: 'Oops...',
       text: 'La clave no es válida!'
     });
+    document.conectarse.clave.focus()
     return;
   } else {
     function isValid(element) {
