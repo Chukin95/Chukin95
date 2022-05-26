@@ -11,14 +11,14 @@ function SQL(sql) {
     if (err) throw err;
     con.query(sql, function (err, result) {
       if (err) throw err;
-      let resultado = {result};
-      console.log(sqlMessage);
+      console.log(result);
     });
   });  
 }
 
-SQL(`CREATE TABLE tateti.tateti5 (id INT NOT NULL AUTO_INCREMENT,
-  jugador VARCHAR(150) NOT NULL,
-  ganadas INT NOT NULL,
-  perdidas INT NOT NULL,
-  PRIMARY KEY (id)) ENGINE = InnoDB;`)
+SQL(`CREATE TABLE tateti.jugadores (
+  id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(150) NOT NULL,
+  puntaje INT NOT NULL,
+  PRIMARY KEY (id));
+`)
