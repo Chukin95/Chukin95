@@ -24,14 +24,19 @@ function validarFormulario(evento) {
   let clave = document.getElementById('clave').value;
   if (usuario.length == 0) {
     alerta('error','No has escrito nada en el usuario!');
+    document.getElementById("usuario").style.borderColor="red";
     document.conectarse.usuario.focus()
     return;
   } else if (usuario.length <= 4) {
     alerta('error','Tu usuario es demasiado corto!');
+    document.getElementById("usuario").style.borderColor="red";
     document.conectarse.usuario.focus()
     return;
   } else if (clave.length < 8) {
     alerta('error','La clave no es válida!');
+    document.getElementById("usuario").style.borderColor="black";
+    document.getElementById("clave").style.borderColor="red";
+    document.getElementById("clave").style.border="4px solid red";
     document.conectarse.clave.focus()
     return;
   } else {
@@ -40,6 +45,23 @@ function validarFormulario(evento) {
     }
   }
   this.submit();
+}
+
+// GOOGLE API
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    console.log('User signed out.');
+  });
 }
 
 /*// Se obtiene el elemento form del html

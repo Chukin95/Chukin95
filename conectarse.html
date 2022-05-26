@@ -10,6 +10,7 @@
         <meta name="keywords" content="Celulares, Accesorios, Iphone, Xiaomi">
         <meta name="author" content="Cristian Gomez">
         <meta name="copyright" content="Cristian Gomez">
+        <meta name="google-signin-client_id" content="500711230994-dc75cm38pkns3g7vthjrm763p99c8s1m.apps.googleusercontent.com">
         <link rel="icon" href="img/favicon.ico" type="image/ico">
         
         <!-- Fontawesome -->
@@ -24,6 +25,7 @@
         <!-- <script src="js/bootstrap.min.js"></script> -->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         
     </head>
 
@@ -40,9 +42,12 @@
                     <label class="form-text" for="clave">Contraseña: </label><input type="password" name="clave" id="clave" placeholder="Ingrese su contraseña...">
                     <br>
                     <button class="form-button" type="submit" value="Enviar">Entrar</button>
-                    <a href="./registro.html">Registrarse</a>
+                    <a href="./registro.html">¿Deseas registrarte?</a>
                     <br>
+                    <!-- <a href="#" onclick="signOut();">Desconectarse</a> -->
                     <a href="./contacto.html">¿Olvidaste tu contraseña?</a>
+                    <br>
+                    <div class="g-signin2" data-onsuccess="onSignIn" align="center"></div>
                 </form>
             </div>
         </main>
