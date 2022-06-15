@@ -199,9 +199,20 @@ table {
     margin-bottom: 3%;
 }
 
+a {
+    text-decoration: none;
+    color: #270202;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+}
+
 .barraDeNavegacion a[href] {
     margin: 0;
     padding: 0px 10px 0px 10px;
+
 }
 
 .mapa {
