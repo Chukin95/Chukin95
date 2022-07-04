@@ -8,17 +8,17 @@ console.log(args) // muestra los argumentos en la consola
 document.getElementById("txtId").value = parts[0][1] // muestra el id en el campo de texto
 document.getElementById("txtNombre").value = parts[1][1] // muestra el nombre en el campo de texto
 document.getElementById("txtPrecio").value = parts[2][1] // muestra el precio en el campo de texto
-document.getElementById("txtStock").value = parts[3][1] // muestra el stock en el campo de texto
+document.getElementById("txtcantidad").value = parts[3][1] // muestra el cantidad en el campo de texto
 
 function modificar() { // función para modificar un producto
     let id = document.getElementById("txtId").value // obtiene el id del campo de texto
     let n = document.getElementById("txtNombre").value // obtiene el nombre del campo de texto
     let p = parseFloat(document.getElementById("txtPrecio").value) // obtiene el precio del campo de texto
-    let s = parseInt(document.getElementById("txtStock").value) // obtiene el stock del campo de texto
+    let s = parseInt(document.getElementById("txtcantidad").value) // obtiene el cantidad del campo de texto
     let producto = { // crea un objeto para guardar los datos del producto
         nombre: n, // asigna el nombre al objeto
         precio: p, // asigna el precio al objeto
-        stock: s // asigna el stock al objeto
+        cantidad: s // asigna el cantidad al objeto
     }
     let url = "http://localhost:5000/productos/" + id // crea la url para modificar el producto
     var options = { // crea un objeto para guardar las opciones de la petición

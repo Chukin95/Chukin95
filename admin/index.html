@@ -42,9 +42,9 @@
                             <td>{{producto.id}}</td>
                             <td>{{producto.nombre}}</td>
                             <td>{{producto.precio}}</td>
-                            <td>{{producto.stock}}</td>
+                            <td>{{producto.cantidad}}</td>
                             <td>
-                                <a :href="'update.html?id='+producto.id+'&nombre='+producto.nombre+'&precio='+producto.precio+'&stock='+producto.stock"
+                                <a :href="'update.html?id='+producto.id+'&nombre='+producto.nombre+'&precio='+producto.precio+'&cantidad='+producto.cantidad"
                                     class="btn btn-primary">Modificar</a>
                                 <button v-on:click="eliminar(producto.id)" class="btn btn-danger">Eliminar</button>
                             </td>

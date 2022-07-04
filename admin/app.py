@@ -31,13 +31,13 @@ class Producto(db.Model):   # La clase Producto hereda de db.Model
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100))  # crea la columna nombre de la tabla
     precio = db.Column(db.Integer)  # crea la columna precio de la tabla
-    stock = db.Column(db.Integer)  # crea la columna stock de la tabla
+    cantidad = db.Column(db.Integer)  # crea la columna cantidad de la tabla
 
-    def __init__(self, nombre, precio, stock):  # define el constructor de la clase
+    def __init__(self, nombre, precio, cantidad):  # define el constructor de la clase
         # no hace falta el id porque lo crea sola mysql por ser auto_incremento
         self.nombre = nombre  # le asigna el valor de nombre a la propiedad nombre
         self.precio = precio  # le asigna el valor de precio a la propiedad precio
-        self.stock = stock  # le asigna el valor de stock a la propiedad stock
+        self.cantidad = cantidad  # le asigna el valor de cantidad a la propiedad cantidad
 
 
 db.create_all()  # crea la tabla en la base de datos
@@ -47,7 +47,7 @@ db.create_all()  # crea la tabla en la base de datos
 class ProductoSchema(ma.Schema):  # Creo una clase para el esquema de la base de datos
     class Meta:  # Defino la clase Meta
         # defino los campos que quiero mostrar
-        fields = ('id', 'nombre', 'precio', 'stock')
+        fields = ('id', 'nombre', 'precio', 'cantidad')
 
 
 producto_schema = ProductoSchema()            # para crear un producto nuevo
@@ -78,8 +78,8 @@ def create_producto():  # Creo una funcion para crear un nuevo producto
     print(request.json)  # request.json contiene el json que envio el cliente
     nombre = request.json['nombre']  # obtengo el nombre del json
     precio = request.json['precio']  # obtengo el precio del json
-    stock = request.json['stock']  # obtengo el stock del json
-    new_producto = Producto(nombre, precio, stock)  # creo un nuevo producto
+    cantidad = request.json['cantidad']  # obtengo el cantidad del json
+    new_producto = Producto(nombre, precio, cantidad)  # creo un nuevo producto
     db.session.add(new_producto)  # lo agrego a la base de datos
     db.session.commit()  # lo guardo en la base de datos
     return producto_schema.jsonify(new_producto)  # lo devuelvo al cliente
@@ -93,11 +93,11 @@ def update_producto(id):  # le paso el id del producto que quiero actualizar
 
     nombre = request.json['nombre']  # obtengo el nombre del json
     precio = request.json['precio']  # obtengo el precio del json
-    stock = request.json['stock']  # obtengo el stock del json
+    cantidad = request.json['cantidad']  # obtengo el cantidad del json
 
     producto.nombre = nombre  # actualizo el nombre del producto
     producto.precio = precio  # actualizo el precio del producto
-    producto.stock = stock  # actualizo el stock del producto
+    producto.cantidad = cantidad  # actualizo el cantidad del producto
     db.session.commit()  # lo guardo en la base de datos
     return producto_schema.jsonify(producto)  # lo devuelvo al cliente
 

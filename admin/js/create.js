@@ -2,12 +2,12 @@ function guardar() { // función para guardar un producto
 
     let n = document.getElementById("txtNombre").value // obtiene el nombre del campo de texto
     let p = parseFloat(document.getElementById("txtPrecio").value) // obtiene el precio del campo de texto
-    let s = parseInt(document.getElementById("txtStock").value) // obtiene el stock del campo de texto
+    let s = parseInt(document.getElementById("txtcantidad").value) // obtiene el cantidad del campo de texto
 
     let producto = { // crea un objeto para guardar los datos del producto
         nombre: n, // asigna el nombre al objeto
         precio: p, // asigna el precio al objeto
-        stock: s // asigna el stock al objeto
+        cantidad: s // asigna el cantidad al objeto
     }
     let url = "http://localhost:5000/productos" // crea la url para guardar el producto
     var options = { // crea un objeto para guardar las opciones de la petición
