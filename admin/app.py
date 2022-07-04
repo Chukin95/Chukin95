@@ -12,7 +12,7 @@ app = Flask(__name__)  # Creo un objeto 'app' de Flask
 # app es mi aplicacion de servidor, va a ser mi servidor
 
 CORS(app)  # Instancio el objeto CORS y le paso como parametro la propiedad app
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://sql10503850:1TcTipTp9b@sql10.freemysqlhosting.net/sql10503850'  # Configuro la propiedad SQLALCHEMY_DATABASE_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql10503850:1TcTipTp9b@sql10.freemysqlhosting.net/sql10503850'  # Configuro la propiedad SQLALCHEMY_DATABASE_URI
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/flaskmysql'
 #                                                        user:clave@localhost/nombreBaseDatos
 # Configuro el modulo SQLAlchemy
