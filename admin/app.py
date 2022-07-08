@@ -13,6 +13,7 @@ app = Flask(__name__)  # Creo un objeto 'app' de Flask
 
 CORS(app)  # Instancio el objeto CORS y le paso como parametro la propiedad app
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql10503850:1TcTipTp9b@sql10.freemysqlhosting.net/sql10503850'  # Configuro la propiedad SQLALCHEMY_DATABASE_URI
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://chukin95:rootroot@chukin95.mysql.pythonanywhere-services.com/chukin95$default'  # Configuro la propiedad SQLALCHEMY_DATABASE_URI
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@localhost/flaskmysql'
 #                                                        user:clave@localhost/nombreBaseDatos
 # Configuro el modulo SQLAlchemy
@@ -29,7 +30,7 @@ class Producto(db.Model):   # La clase Producto hereda de db.Model
     # define los campos de la tabla
     # crea la columna id de la tabla
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(100))  # crea la columna nombre de la tabla
+    nombre = db.Column(db.Text)  # crea la columna nombre de la tabla
     precio = db.Column(db.Integer)  # crea la columna precio de la tabla
     cantidad = db.Column(db.Integer)  # crea la columna cantidad de la tabla
 

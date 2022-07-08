@@ -6,7 +6,7 @@ for (let i = 0; i < args.length; ++i) { // recorre el array de argumentos
 }
 console.log(args) // muestra los argumentos en la consola
 document.getElementById("txtId").value = parts[0][1] // muestra el id en el campo de texto
-document.getElementById("txtNombre").value = parts[1][1] // muestra el nombre en el campo de texto
+document.getElementById("txtNombre").value = decodeURI(parts[1][1]) // muestra el nombre decodificado en el campo de texto
 document.getElementById("txtPrecio").value = parts[2][1] // muestra el precio en el campo de texto
 document.getElementById("txtcantidad").value = parts[3][1] // muestra el cantidad en el campo de texto
 
