@@ -1,11 +1,13 @@
 function guardar() { // función para guardar un producto
 
     let n = document.getElementById("txtNombre").value // obtiene el nombre del campo de texto
+    let i = document.getElementById("txtImagen_url").value // obtiene la url de imagen del campo de texto
     let p = parseFloat(document.getElementById("txtPrecio").value) // obtiene el precio del campo de texto
     let s = parseInt(document.getElementById("txtcantidad").value) // obtiene el cantidad del campo de texto
 
     let producto = { // crea un objeto para guardar los datos del producto
         nombre: n, // asigna el nombre al objeto
+        imagen_url: i, // asigna la url de imagen al objeto
         precio: p, // asigna el precio al objeto
         cantidad: s // asigna el cantidad al objeto
     }
@@ -19,13 +21,13 @@ function guardar() { // función para guardar un producto
     fetch(url, options) // realiza la petición
         .then(function () { // función para manejar la respuesta de la petición
             console.log("creado") // muestra en la consola que se creó el producto
-            alert("Grabado") // muestra un mensaje de alerta
+            alert("Agregado Correctamente!") // muestra un mensaje de alerta
 
             // Handle response we get from the API
         })
         .catch(err => { // función para manejar el error de la petición
             //this.errored = true
-            alert("Error al grabar") // muestra un mensaje de alerta
+            alert("Error al intentar agregar") // muestra un mensaje de alerta
             console.error(err); // muestra en la consola el error
         })
 }
