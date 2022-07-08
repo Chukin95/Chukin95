@@ -30,7 +30,8 @@ class Producto(db.Model):   # La clase Producto hereda de db.Model
     # define los campos de la tabla
     # crea la columna id de la tabla
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.Text)  # crea la columna nombre de la tabla
+    nombre = db.Column(db.String(100))  # crea la columna nombre de la tabla
+    imagen_url = db.Column(db.Text) # crea la columna para url de la imagen del producto
     precio = db.Column(db.Integer)  # crea la columna precio de la tabla
     cantidad = db.Column(db.Integer)  # crea la columna cantidad de la tabla
 
