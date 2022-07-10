@@ -1,13 +1,11 @@
 function guardar() { // función para guardar un producto
 
     let n = document.getElementById("txtNombre").value // obtiene el nombre del campo de texto
-    let i = document.getElementById("txtImagen_url").value // obtiene la url de imagen del campo de texto
     let p = parseFloat(document.getElementById("txtPrecio").value) // obtiene el precio del campo de texto
     let s = parseInt(document.getElementById("txtcantidad").value) // obtiene el cantidad del campo de texto
 
     let producto = { // crea un objeto para guardar los datos del producto
         nombre: n, // asigna el nombre al objeto
-        imagen_url: i, // asigna la url de imagen al objeto
         precio: p, // asigna el precio al objeto
         cantidad: s // asigna el cantidad al objeto
     }
