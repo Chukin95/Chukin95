@@ -1,13 +1,19 @@
 function guardar() { // función para guardar un producto
 
     let n = document.getElementById("txtNombre").value // obtiene el nombre del campo de texto
+    let d = document.getElementById("txtDescripcion").value // obtiene la descripción del campo de texto
+    let i = document.getElementById("txtImagen").value // obtiene la url de la imagen del campo de texto
     let p = parseFloat(document.getElementById("txtPrecio").value) // obtiene el precio del campo de texto
     let s = parseInt(document.getElementById("txtcantidad").value) // obtiene el cantidad del campo de texto
+    let ds = document.getElementById("txtDescuento").value // obtiene el descuento del campo de texto
 
     let producto = { // crea un objeto para guardar los datos del producto
         nombre: n, // asigna el nombre al objeto
+        descripcion: d, // asigna la descripción al objeto
+        imagen: i, // asigna la url de la imagen al objeto
         precio: p, // asigna el precio al objeto
-        cantidad: s // asigna el cantidad al objeto
+        cantidad: s, // asigna el cantidad al objeto
+        descuento: ds // asigna el descuento al objeto
     }
     let url = "https://pc-componentes.herokuapp.com/productos" // crea la url para guardar el producto
     var options = { // crea un objeto para guardar las opciones de la petición

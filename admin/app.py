@@ -34,14 +34,20 @@ class Producto(db.Model):   # La clase Producto hereda de db.Model
     # crea la columna id de la tabla
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100))  # crea la columna nombre de la tabla
+    descripcion = db.Column(db.String(400))
+    imagen = db.Column(db.String(500))
     precio = db.Column(db.Integer)  # crea la columna precio de la tabla
     cantidad = db.Column(db.Integer)  # crea la columna cantidad de la tabla
+    descuento = db.Column(db.Integer)
 
-    def __init__(self, nombre, precio, cantidad):  # define el constructor de la clase
+    def __init__(self, nombre, descripcion, imagen, precio, cantidad, descuento):  # define el constructor de la clase
         # no hace falta el id porque lo crea sola mysql por ser auto_incremento
         self.nombre = nombre  # le asigna el valor de nombre a la propiedad nombre
+        self.descripcion = descripcion  # le asigna el valor de descripcion a la propiedad descripcion
+        self.imagen = imagen  # le asigna el valor de imagen a la propiedad imagen
         self.precio = precio  # le asigna el valor de precio a la propiedad precio
         self.cantidad = cantidad  # le asigna el valor de cantidad a la propiedad cantidad
+        self.descuento = descuento  # le asigna el valor de descuento a la propiedad descuento
 
 
 db.create_all()  # crea la tabla en la base de datos
@@ -51,7 +57,7 @@ db.create_all()  # crea la tabla en la base de datos
 class ProductoSchema(ma.Schema):  # Creo una clase para el esquema de la base de datos
     class Meta:  # Defino la clase Meta
         # defino los campos que quiero mostrar
-        fields = ('id', 'nombre', 'precio', 'cantidad')
+        fields = ('id', 'nombre', 'descripcion', 'imagen', 'precio', 'cantidad', 'descuento')
 
 
 producto_schema = ProductoSchema()            # para crear un producto nuevo
@@ -81,9 +87,12 @@ def get_producto(id):  # Creo una funcion para obtener un producto
 def create_producto():  # Creo una funcion para crear un nuevo producto
     print(request.json)  # request.json contiene el json que envio el cliente
     nombre = request.json['nombre']  # obtengo el nombre del json
+    descripcion = request.json['descripcion']  # obtengo la descripcion del json
+    imagen = request.json['imagen']  # obtengo la imagen del json
     precio = request.json['precio']  # obtengo el precio del json
     cantidad = request.json['cantidad']  # obtengo el cantidad del json
-    new_producto = Producto(nombre, precio, cantidad)  # creo un nuevo producto
+    descuento = request.json['descuento']  # obtengo el descuento del json
+    new_producto = Producto(nombre, descripcion, imagen, precio, cantidad, descuento)  # creo un nuevo producto
     db.session.add(new_producto)  # lo agrego a la base de datos
     db.session.commit()  # lo guardo en la base de datos
     return producto_schema.jsonify(new_producto)  # lo devuelvo al cliente
@@ -96,12 +105,18 @@ def update_producto(id):  # le paso el id del producto que quiero actualizar
     producto = Producto.query.get(id)
 
     nombre = request.json['nombre']  # obtengo el nombre del json
+    descripcion = request.json['descripcion']  # obtengo la descripcion del json
+    imagen = request.json['imagen']  # obtengo la imagen del json
     precio = request.json['precio']  # obtengo el precio del json
     cantidad = request.json['cantidad']  # obtengo el cantidad del json
+    descuento = request.json['descuento']  # obtengo el descuento del json
 
     producto.nombre = nombre  # actualizo el nombre del producto
+    producto.descripcion = descripcion  # actualizo la descripcion del producto
+    producto.imagen = imagen  # actualizo la imagen del producto
     producto.precio = precio  # actualizo el precio del producto
     producto.cantidad = cantidad  # actualizo el cantidad del producto
+    producto.descuento = descuento  # actualizo el descuento del producto
     db.session.commit()  # lo guardo en la base de datos
     return producto_schema.jsonify(producto)  # lo devuelvo al cliente
 

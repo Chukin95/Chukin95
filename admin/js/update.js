@@ -7,18 +7,27 @@ for (let i = 0; i < args.length; ++i) { // recorre el array de argumentos
 console.log(args) // muestra los argumentos en la consola
 document.getElementById("txtId").value = parts[0][1] // muestra el id en el campo de texto
 document.getElementById("txtNombre").value = decodeURI(parts[1][1]) // muestra el nombre decodificado en el campo de texto
-document.getElementById("txtPrecio").value = parts[2][1] // muestra el precio en el campo de texto
-document.getElementById("txtcantidad").value = parts[3][1] // muestra el cantidad en el campo de texto
+document.getElementById("txtDescripcion").value = decodeURI(parts[2][1]) // muestra la descripción decodificada en el campo de texto
+document.getElementById("txtImagen").value = parts[3][1] // muestra la url en el campo de texto
+document.getElementById("txtPrecio").value = parts[4][1] // muestra el precio en el campo de texto
+document.getElementById("txtcantidad").value = parts[5][1] // muestra el cantidad en el campo de texto
+document.getElementById("txtDescuento").value = parts[6][1] // muestra el cantidad en el campo de texto
 
 function modificar() { // función para modificar un producto
     let id = document.getElementById("txtId").value // obtiene el id del campo de texto
     let n = document.getElementById("txtNombre").value // obtiene el nombre del campo de texto
+    let d = document.getElementById("txtDescripcion").value // obtiene la descripción del campo de texto
+    let i = document.getElementById("txtImagen").value // obtiene la url del campo de texto
     let p = parseFloat(document.getElementById("txtPrecio").value) // obtiene el precio del campo de texto
     let s = parseInt(document.getElementById("txtcantidad").value) // obtiene el cantidad del campo de texto
+    let ds = parseInt(document.getElementById("txtDescuento").value) // obtiene el descuento del campo de texto
     let producto = { // crea un objeto para guardar los datos del producto
         nombre: n, // asigna el nombre al objeto
+        descripcion: d, // asigna la descripción al objeto
+        imagen: i, // asigna la url de la imagen al objeto
         precio: p, // asigna el precio al objeto
-        cantidad: s // asigna el cantidad al objeto
+        cantidad: s, // asigna el cantidad al objeto
+        descuento: ds // asigna el descuento al objeto
     }
     let url = "https://pc-componentes.herokuapp.com/productos/" + id // crea la url para modificar el producto
     var options = { // crea un objeto para guardar las opciones de la petición
