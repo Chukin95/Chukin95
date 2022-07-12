@@ -9,7 +9,7 @@ function guardar() { // función para guardar un producto
         precio: p, // asigna el precio al objeto
         cantidad: s // asigna el cantidad al objeto
     }
-    let url = "http://localhost:5000/productos" // crea la url para guardar el producto
+    let url = "https://pc-componentes.herokuapp.com/productos" // crea la url para guardar el producto
     var options = { // crea un objeto para guardar las opciones de la petición
         body: JSON.stringify(producto), // asigna el objeto producto al cuerpo de la petición
         method: 'POST', // asigna el método de la petición

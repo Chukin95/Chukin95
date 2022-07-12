@@ -20,7 +20,7 @@ function modificar() { // función para modificar un producto
         precio: p, // asigna el precio al objeto
         cantidad: s // asigna el cantidad al objeto
     }
-    let url = "http://localhost:5000/productos/" + id // crea la url para modificar el producto
+    let url = "https://pc-componentes.herokuapp.com/productos/" + id // crea la url para modificar el producto
     var options = { // crea un objeto para guardar las opciones de la petición
         body: JSON.stringify(producto), // asigna el objeto producto al cuerpo de la petición
         method: 'PUT', // asigna el método de la petición

@@ -7,7 +7,7 @@ if (document.getElementById("app")) { // si existe el elemento con id app
             loading: true // crea una variable para controlar si se está cargando
         },
         created() { // función para crear el componente
-            var url = 'http://localhost:5000/productos' // crea la url para obtener los productos
+            var url = 'https://pc-componentes.herokuapp.com/productos' // crea la url para obtener los productos
             this.fetchData(url) // realiza la petición
         },
         methods: { // crea un objeto para guardar los métodos
@@ -23,7 +23,7 @@ if (document.getElementById("app")) { // si existe el elemento con id app
                     })
             },
             eliminar(producto) { // función para eliminar un producto
-                const url = 'http://localhost:5000/producto/' + producto; // crea la url para eliminar el producto
+                const url = 'https://pc-componentes.herokuapp.com/producto/' + producto; // crea la url para eliminar el producto
                 var options = { // crea un objeto para guardar las opciones de la petición
                     method: 'DELETE', // asigna el método de la petición
                 }
