@@ -92,7 +92,7 @@ function modificarProductos() {
       descuento:ds
   }
  // let url = "http://192.168.1.115:8080/productos/"+id
-  let url = "http://localhost:5000/productos/"+id
+  let url = "https://pc-componentes.herokuapp.com/productos/"+id
   var options = {
       body: JSON.stringify(producto),
       method: 'PUT',
@@ -120,7 +120,7 @@ function modificarCategoria() {
   let categoria = {
       descripcion:d
   }
-  let url = "http://localhost:5000/categorias/"+id
+  let url = "https://pc-componentes.herokuapp.com/categorias/"+id
   var options = {
       body: JSON.stringify(categoria),
       method: 'PUT',
