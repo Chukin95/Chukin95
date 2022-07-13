@@ -667,6 +667,7 @@ audio {
     width: 100%;
 }
 
+
 @media screen and (max-width: 1255px) {
     .producto {
         width: 45%;
