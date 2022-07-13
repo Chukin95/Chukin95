@@ -85,22 +85,6 @@ document.getElementById("idwhatsapp").innerHTML = whatsapp_content;
 
 // prueba
 
-let whatsapp_div = document.getElementById("idwhatsapp")
-
-let whatsapp_close = document.createElement('i');
-whatsapp_close.classList.add('fa-solid');
-whatsapp_close.classList.add('fa-circle-xmark');
-whatsapp_close.classList.add('fa-xs');
-//whatsapp_close.addEventListener('click', cerrar_whatsapp);
-whatsapp_close.classList.add('whatsapp_close');
-whatsapp_close.setAttribute('onclick', 'cerrar_whatsapp()');
-whatsapp_div.appendChild(whatsapp_close);
-document.body.appendChild(whatsapp_div);
-
-function cerrar_whatsapp() {
-    document.getElementById("whatsapp_div").style.display = "none";;
-}
-
 /*
 // SCRIPT PARA WHATSAPP FIXED
 let whatsapp_div = document.createElement('div');

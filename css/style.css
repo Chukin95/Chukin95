@@ -611,6 +611,7 @@ audio {
 .whatsapp_close {
     position: relative;
     top: -2.3vw;
+    left: 90.3vw;
     color: rgba(0, 100, 0, 0.5);
 }
 
