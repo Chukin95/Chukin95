@@ -8,7 +8,7 @@ console.log(args) // muestra los argumentos en la consola
 document.getElementById("txtId").value = parts[0][1] // muestra el id en el campo de texto
 document.getElementById("txtNombre").value = decodeURI(parts[1][1]) // muestra el nombre decodificado en el campo de texto
 document.getElementById("txtDescripcion").value = decodeURI(parts[2][1]) // muestra la descripción decodificada en el campo de texto
-document.getElementById("txtImagen").value = parts[3][1] // muestra la url en el campo de texto
+document.getElementById("txtImagen").value = decodeURI(parts[3][1]) // muestra la url en el campo de texto
 document.getElementById("txtPrecio").value = parts[4][1] // muestra el precio en el campo de texto
 document.getElementById("txtcantidad").value = parts[5][1] // muestra el cantidad en el campo de texto
 document.getElementById("txtDescuento").value = parts[6][1] // muestra el cantidad en el campo de texto

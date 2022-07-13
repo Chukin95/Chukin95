@@ -1,6 +1,6 @@
-if (document.getElementById("app")) { // si existe el elemento con id app
-    const app = new Vue({ // crea una instancia de Vue
-        el: "#app", // selecciona el elemento con id app
+if (document.getElementById("app_index")) { // si existe el elemento con id app
+    const app_index = new Vue({ // crea una instancia de Vue
+        el: "#app_index", // selecciona el elemento con id app
         data: { // crea un objeto para guardar los datos
             productos: [], // crea un array para guardar los productos
             errored: false, // crea una variable para controlar si hay un error
