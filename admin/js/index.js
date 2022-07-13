@@ -91,7 +91,6 @@ function modificarProductos() {
       imagen:f,
       descuento:ds
   }
- // let url = "http://192.168.1.115:8080/productos/"+id
   let url = "https://pc-componentes.herokuapp.com/productos/"+id
   var options = {
       body: JSON.stringify(producto),
