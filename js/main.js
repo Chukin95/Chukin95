@@ -84,15 +84,23 @@ document.getElementById("idfooter").innerHTML = footer_content;
 document.getElementById("idwhatsapp").innerHTML = whatsapp_content;
 
 // prueba
-let whatsapp_logo = document.getElementById("idwhatsapp")
-whatsapp_logo.onmouseover = function () {
-    whatsapp_logo.classList.add('animate__rubberBand');
-    whatsapp_logo.classList.remove('animate__headShake');
+
+let whatsapp_div = document.getElementById("idwhatsapp")
+
+let whatsapp_close = document.createElement('i');
+whatsapp_close.classList.add('fa-solid');
+whatsapp_close.classList.add('fa-circle-xmark');
+whatsapp_close.classList.add('fa-xs');
+//whatsapp_close.addEventListener('click', cerrar_whatsapp);
+whatsapp_close.classList.add('whatsapp_close');
+whatsapp_close.setAttribute('onclick', 'cerrar_whatsapp()');
+whatsapp_div.appendChild(whatsapp_close);
+document.body.appendChild(whatsapp_div);
+
+function cerrar_whatsapp() {
+    document.getElementById("whatsapp_div").style.display = "none";;
 }
-whatsapp_logo.onmouseout = function () {
-    whatsapp_logo.classList.remove('animate__rubberBand');
-    whatsapp_logo.classList.add('animate__headShake');
-}
+
 /*
 // SCRIPT PARA WHATSAPP FIXED
 let whatsapp_div = document.createElement('div');
