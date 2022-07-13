@@ -82,6 +82,17 @@ document.getElementById("idheader").innerHTML = header_content;
 document.getElementById("idnavbar").innerHTML = navbar_content;
 document.getElementById("idfooter").innerHTML = footer_content;
 document.getElementById("idwhatsapp").innerHTML = whatsapp_content;
+
+// prueba
+let whatsapp_logo = document.getElementById("idwhatsapp")
+whatsapp_logo.onmouseover = function () {
+    whatsapp_logo.classList.add('animate__rubberBand');
+    whatsapp_logo.classList.remove('animate__headShake');
+}
+whatsapp_logo.onmouseout = function () {
+    whatsapp_logo.classList.remove('animate__rubberBand');
+    whatsapp_logo.classList.add('animate__headShake');
+}
 /*
 // SCRIPT PARA WHATSAPP FIXED
 let whatsapp_div = document.createElement('div');
