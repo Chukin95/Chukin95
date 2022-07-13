@@ -11,7 +11,7 @@ const app = new Vue({
     },
     created() {
         var url = 'https://pc-componentes.herokuapp.com/productos/'+id  //localhost:5000/produtos/2
-        var urlCategoria = 'https://pc-componentes.herokuapp.com/categorias/'
+        var urlCategoria = 'https://pc-componentes.herokuapp.com/categorias'
         this.fetchData(url,urlCategoria)
     },
     methods: {
