@@ -50,7 +50,7 @@
                 <div class="mb-3" id="appCategoria">
                     <label for="txtCategoria">Categoria:</label>
                     <select name="select" id="txtCategoria" >
-                            <option v-for="dato in datos" :value="dato.id">{{dato.descripcion}}  </option>    
+                            <option v-for="categoria in categorias" :value="categoria.id">{{categoria.descripcion}}  </option>    
                     </select>
                 </div>   
                 
@@ -85,6 +85,7 @@
     
         <footer id="idfooter"></footer>
         <script src="./js/index.js"></script>
+        <script src="./js/categorias_update.js"></script>
         <script src="./js/main.js"></script>
     </body>
 

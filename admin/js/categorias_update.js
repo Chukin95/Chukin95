@@ -1,29 +1,30 @@
 var id = location.search.substring(4).split('&');
-// lee el argumento id pasados a este formulario
+// lee los argumentos pasados a este formulario
 
 const app = new Vue({
     el: "#appCategoria",
     data: {
-        datos: [],
+        categorias:[], // o {} 
         errored: false,
         loading: true
     },
-    created() {
-        var url = 'https://pc-componentes.herokuapp.com/categorias/'+id  //localhost:5000/categorias/2
-    
-        this.fetchData(url)
+    created() { 
+        var urlCategoria = 'https://pc-componentes.herokuapp.com/categorias'+id
+        this.fetchData(urlCategoria)
     },
     methods: {
-        fetchData(url) {
-            fetch(url)
+        fetchData(urlCategoria) {
+            fetch(urlCategoria)
                 .then(response => response.json())
                 .then(data => {
-                    this.datos = data;
+                    this.categorias = data;
                     this.loading = false;
                 })
                 .catch(err => {
                     this.errored = true
                 })
-        },        
+        },
+        
     }
 })
+
