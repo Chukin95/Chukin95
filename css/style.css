@@ -123,9 +123,9 @@ body {
 }
 
 main {
-    text-align: center;
-    margin: 0 5%;
-    min-height: 25vw;
+    /* text-align: center; */
+    /* margin: 0 5%; */
+    min-height: 35vw;
 }
 
 .logo-img {
@@ -163,6 +163,7 @@ header {
 h1 {
     font-family: 'pricedownblack';
     font-size: 3rem;
+    text-align: center; 
     color: rgb(206, 206, 206);
     letter-spacing: 0.3rem;
     text-shadow: 3px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
@@ -170,6 +171,7 @@ h1 {
 }
 
 h2 {
+    text-align: center; 
     color: #270202;
 }
 
