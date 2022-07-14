@@ -41,12 +41,12 @@
             <form class="formulario">        
                 <div class="mb-3">
                     <label for="txtDescripcion">Descripcion:</label>
-                    <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion" :value="datos.descripcion" ><br>
+                    <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion" :value="categorias.descripcion" ><br>
                 </div>
-                
-                <button  type="button"   class="btn btn-success" onclick="guardarCategoria()">Guardar</button>
-                <br><br>
-                <a href="categorias.html" class="btn btn-warning">Volver</a><br>
+                <div class="centrar">
+                    <button  type="button"   class="btn btn-success" onclick="guardarCategoria()">Guardar</button>
+                    <a href="categorias.html" class="btn btn-warning">Volver</a><br>
+                </div>
             </form>
             <br>
         </div>

@@ -51,7 +51,7 @@
                     <label for="txtCategoria">Categoria:</label>
                     <select name="select" id="txtCategoria" >
                             <option v-for="categoria in categorias" :value="categoria.id">{{categoria.descripcion}}  </option>    
-                    </select>
+                    </select> 
                 </div>   
                 
                 <div class="mb-3">
@@ -71,9 +71,11 @@
                     <input type="number" class="form-control" name="txtDescuento" id="txtDescuento"> <br>
                 </div>
 
-                <button  type="button"   class="btn btn-success" onclick="guardarProducto()">Guardar</button>
-                <br><br>
-                <a href="productos.html" class="btn btn-warning">Volver</a><br>
+                <div class="centrar">
+                    <button  type="button"   class="btn btn-success" onclick="guardarProducto()">Guardar</button>
+                    <br><br>
+                    <a href="productos.html" class="btn btn-warning">Volver</a><br>
+                </div>
             </form>
             <br>
            
@@ -85,7 +87,8 @@
     
         <footer id="idfooter"></footer>
         <script src="./js/index.js"></script>
-        <script src="./js/categorias_update.js"></script>
+        <script src="./js/productos_create.js"></script>
+        <!-- <script src="./js/categorias_update.js"></script> -->
         <script src="./js/main.js"></script>
     </body>
 

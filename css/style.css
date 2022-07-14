@@ -460,6 +460,7 @@ audio {
 }
 
 .precioProductos {
+    text-align: center;
     font-weight: 900;
     color: #5fc24c;
 }
@@ -470,6 +471,7 @@ audio {
 }
 
 .botonComprar {
+    text-align: center;
     display: block;
     font-family: 'Fredoka One', sans-serif;
     font-weight: 700;

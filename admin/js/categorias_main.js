@@ -2,7 +2,7 @@ if (document.getElementById("appCategoria")) {
     const app1 = new Vue({
         el: "#appCategoria",
         data: {
-            datos: [],
+            categorias: [],
             errored: false,
             loading: true
         },
@@ -15,9 +15,9 @@ if (document.getElementById("appCategoria")) {
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
-                        this.datos = data;
+                        this.categorias = data;
                         this.loading = false;
-                        console.log(this.datos)             
+                        console.log(this.categorias)             
                     })
                     .catch(err => {
                         this.errored = true

@@ -41,17 +41,18 @@
             <form  id='appCategoria' class="formulario">
                 <div class="mb-3">
                     <label for="txtId">Id</label>
-                    <input type="text" class="form-control" name="txtId" id="txtId" :value="datos.id" disabled  ><br>
+                    <input type="text" class="form-control" name="txtId" id="txtId" :value="categorias.id" disabled  ><br>
                 </div>
                 
                 <div class="mb-3">
                     <label for="txtDescripcion">Descripcion:</label>
-                    <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion" :value="datos.descripcion" ><br>
+                    <input type="text" class="form-control" name="txtDescripcion" id="txtDescripcion" :value="categorias.descripcion" ><br>
                 </div>
                 
-                <button  type="button" class="btn btn-success" onclick="modificarCategoria()">Guardar</button>
-                <br><br>
-                <a href="categorias.html" class="btn btn-warning">Volver</a><br>
+                <div class="centrar"></div>
+                    <button  type="button" class="btn btn-success" onclick="modificarCategoria()">Guardar</button>
+                    <a href="categorias.html" class="btn btn-warning">Volver</a><br>
+                </div>
             </form>
             <br>
         </div>

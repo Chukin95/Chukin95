@@ -5,7 +5,7 @@ class Producto(db.Model):  # defino la tabla
     nombre=db.Column(db.String(100))
     descripcion=db.Column(db.String(100))
     categoria=db.Column(db.Integer)
-    precio=db.Column(db.Integer)
+    precio=db.Column(db.Float(15))
     stock=db.Column(db.Integer)
     imagen=db.Column(db.String(255))
     descuento=db.Column(db.Integer)

@@ -258,6 +258,14 @@ input[type=submit]:hover {
   padding: 2%;
   margin: 1% 2%;
 }
+.admin_producto {
+  width: 150px;
+  height: 150px;
+}
+
+.datos_productos_admin {
+  vertical-align: middle;
+}
 
 textarea {
   width: 60%;

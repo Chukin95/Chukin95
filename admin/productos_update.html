@@ -76,13 +76,13 @@
                 <div class="mb-3" >
                     <label for="txtCategoria">Categoria:</label>
                     <select name="select" id="txtCategoria">
-                        <option v-for="dato in categorias" :value="dato.id" :selected="dato.id==productos.categoria">{{dato.descripcion}}</option>
+                        <option v-for="categoria in categorias" :value="categoria.id" :selected="categoria.id==productos.categoria">{{categoria.descripcion}}</option>
                     </select>
                 </div>
-         
-               
-                <button type="button" class="btn btn-success" onclick="modificarProductos()">Guardar</button>
-                <br><br><a href="productos.html" class="btn btn-warning">Volver</a><br>
+                <div class="centrar">
+                    <button type="button" class="btn btn-success" onclick="modificarProductos()">Guardar</button>
+                    <a href="productos.html" class="btn btn-warning">Volver</a><br>
+                </div>
             </form>
            
         </div>

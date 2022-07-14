@@ -8,7 +8,7 @@ CORS(app)     # soluciona el error cuando el frontend accede a los endpoint que 
 
 # app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@localhost/flaskmysql'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql10505964:fwbFfGGbbZ@sql10.freemysqlhosting.net/sql10505964'  # Configuro la propiedad SQLALCHEMY_DATABASE_URI
-#                                          usuario:clave@localhost/nombreBaseDeDAtos
+#                                          usuario:clave@localhost/nombreBaseDecategorias
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db= SQLAlchemy(app)

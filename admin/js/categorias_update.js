@@ -9,7 +9,7 @@ const app = new Vue({
         loading: true
     },
     created() { 
-        var urlCategoria = 'https://pc-componentes.herokuapp.com/categorias'+id
+        var urlCategoria = 'https://pc-componentes.herokuapp.com/categorias/'+id
         this.fetchData(urlCategoria)
     },
     methods: {

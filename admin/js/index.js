@@ -78,7 +78,7 @@ function modificarProductos() {
   let su = parseInt(document.getElementById("txtCategoria").value)
   let p = parseFloat(document.getElementById("txtPrecio").value)
   let s = parseInt(document.getElementById("txtStock").value)
-  let f =document.getElementById("txtImagen").value
+  let f = document.getElementById("txtImagen").value
   let ds = parseInt(document.getElementById("txtDescuento").value)
   
   
