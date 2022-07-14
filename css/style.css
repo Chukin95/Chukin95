@@ -203,7 +203,13 @@ table {
 
 a {
     text-decoration: none;
-    color: #270202;
+    color: #000000;
+}
+
+a#enviar-mail {
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
 }
 
 a:-webkit-any-link {
@@ -214,7 +220,6 @@ a:-webkit-any-link {
 .barraDeNavegacion a[href] {
     margin: 0;
     padding: 0px 10px 0px 10px;
-
 }
 
 .mapa {
