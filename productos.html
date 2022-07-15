@@ -72,7 +72,7 @@
                             <hr>
                             <p class="pProductos">{{producto.descripcion}}</p>
                             <hr>
-                            <p class="precioProductos">Precio: ${{producto.precio}}</p>
+                            <p class="precioProductos">Precio: ${{new Intl.NumberFormat('es-AR').format(producto.precio)}}</p>
                             <a href="./productos.html" class="botonComprar">COMPRAR</a>
                         </div>
                     </section>
