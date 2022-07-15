@@ -3,7 +3,7 @@ from app import db,ma
 class Producto(db.Model):  # defino la tabla
     id=db.Column(db.Integer, primary_key=True)
     nombre=db.Column(db.String(100))
-    descripcion=db.Column(db.String(100))
+    descripcion=db.Column(db.String(500))
     categoria=db.Column(db.Integer)
     precio=db.Column(db.Float(15))
     stock=db.Column(db.Integer)
