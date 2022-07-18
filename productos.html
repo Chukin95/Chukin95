@@ -49,27 +49,29 @@
                 <div id="app">
                     <div style="padding: 0vw 20vw;">
                         <!-- <form class="formulario-filtro" action="http://127.0.0.1:5000/productos/filtros" id="filtros"> -->
-                            <label for="categoria">Categoría</label>
-                            <select class="form-control" id="categoria" name="categoria" v-model="categoria">
+                            <label class="form-label form-inline" for="categoria">Categoría</label>
+                            <select class="form-control form-inline" id="categoria" name="categoria" v-model="categoria">
                                 <option value="">Todas</option>
                                 <!-- <option value="1">Celulares</option>
                                 <option value="2">Accesorios</option> -->
                                 <option v-for="categoria in categorias" :value="categoria.id">{{categoria.descripcion}}</option>
                             </select>
-                            <select class="form-control input-filtro" name="filtrar" id="filtrar" v-model="filtrar">
+                            <label class="form-label form-inline" for="filtrar">Filtrar:</label>
+                            <select class="form-control input-filtro form-inline" name="filtrar" id="filtrar" v-model="filtrar">
                                 <option value="" disabled="" selected="">Filtrar por...</option>
                                 <option value="nombre">Nombre</option>
                                 <option value="precio">Precio</option>
                                 <option value="stock">Stock</option>
                                 <option value="descuento">Descuento</option>
                             </select>
-                            <select class="form-control input-filtro" name="orden" id="orden" v-model="orden">
+                            <label class="form-label form-inline" for="orden">Ordenar:</label>
+                            <select class="form-control input-filtro form-inline" name="orden" id="orden" v-model="orden">
                                 <option value="" disabled="" selected="">Ordenar...</option>
                                 <option value="DESC">Mayor a menor</option>
                                 <option value="ASC">Menor a mayor</option>
                             </select>
                             <!-- <input class="boton boton-crear" type="submit" value="filtrar"> -->
-                            <button class="btn-lg btn-primary" value="filtros" @click="filtrarAhora" >Filtrar</button>
+                            <button class="btn-sm btn-primary" value="filtros" @click="filtrarAhora" >Filtrar</button>
                             <br>
                         <!-- </form> -->
                     </div>

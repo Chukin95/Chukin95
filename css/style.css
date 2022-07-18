@@ -369,6 +369,22 @@ audio {
     border-radius: 0.3125em;
 }
 
+.form-label {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.form-inline {
+    display: inline!important;
+    width: 10vw!important;
+}
+
+.btn-sm {
+    /* padding: 0.5vw 1vw 0 1vw!important; */
+    margin-bottom: 0.6vw;
+    margin-left: 1vw;
+    vertical-align: middle;
+}
 .form {
     width: 50%;
     display: flex;
