@@ -478,7 +478,7 @@ audio {
     border: 1px solid #333;
     border-radius: 0.3125em;
     box-shadow: 0.3125em 0.3125em 0.3125em #333;
-    width: 22vw;
+    width: 21vw;
     /* height: 400px; */
     box-sizing: border-box;
 }
@@ -718,7 +718,7 @@ audio {
 
 @media screen and (max-width: 1255px) {
     .producto {
-        width: 43vw;
+        width: 42vw;
     }
 
     .filtros-productos {
@@ -832,7 +832,7 @@ audio {
 
 @media screen and (max-width: 630px) {
     .producto {
-        width: 90vw;
+        width: 85vw;
     }
 
     .form-inline {
