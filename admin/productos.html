@@ -59,24 +59,24 @@
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th>Descripcion</th>
+                            <!-- <th>Descripcion</th> -->
                             <th>Categoria</th>
                             <th>Precio</th>
                             <th>Stock</th>
-                            <th>Imagen</th>
+                            <!-- <th>Imagen</th> -->
                             <th>Descuento</th>
                             <th>Acciones</th>
                         </tr>
                         <tr class="datos_productos_admin" v-for="producto in productos">
                             <td>{{producto.id}}</td>
-                            <td>{{producto.nombre}}</td>
-                            <td>{{producto.descripcion}}</td>
+                            <td>{{producto.nombre.substring(0,24)}}</td>
+                            <!-- <td>{{producto.descripcion.substring(0,10)}}</td> -->
                             <td v-for="categoria in categorias" v-if="(categoria.id == producto.categoria)">{{categoria.descripcion}}</td>
-                            <td>$ {{new Intl.NumberFormat('es-AR').format(producto.precio)}}</td>
+                            <td>${{new Intl.NumberFormat('es-AR').format(producto.precio)}}</td>
                             <td>{{producto.stock}}</td>
-                            <td>
-                                <img class="admin_producto" :src="producto.imagen" :alt="'imagen:'+producto.nombre">                               
-                            </td>
+                            <!-- <td>
+                                <img class="admin_producto" :src="producto.imagen" :alt="'imagen:'+producto.nombre" :title="producto.nombre">                               
+                            </td> -->
                             <td>{{producto.descuento}}</td>
                             <td>
                                 <a :href="'productos_update.html?id='+producto.id " class="btn btn-primary">Modificar</a>

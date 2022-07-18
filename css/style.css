@@ -374,10 +374,7 @@ audio {
     font-weight: bold;
 }
 
-.form-inline {
-    display: inline!important;
-    width: 10vw!important;
-}
+
 
 .btn-sm {
     /* padding: 0.5vw 1vw 0 1vw!important; */
@@ -450,27 +447,51 @@ audio {
     flex-wrap: wrap;
 }
 
+.filtros-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 1vw;
+    background-color: #d5040462;
+    color: #000000;
+}
+
+.form-inline-text {
+    display: inline!important;
+    text-align: center!important;
+    width: 10vw!important;
+    font-size: xx-large!important;
+}
+
+.form-inline {
+    display: inline!important;
+    width: 10vw!important;
+}
+
 .producto {
     font-family: 'Lato', sans-serif;
-    background: rgb(230, 230, 230);
+    background: rgb(255, 255, 255);
     margin: 0.625em;
     padding: 0.625em;
     border: 1px solid #333;
     border-radius: 0.3125em;
     box-shadow: 0.3125em 0.3125em 0.3125em #333;
-    width: 22%;
-    height: 100%;
+    width: 22vw;
+    /* height: 400px; */
     box-sizing: border-box;
 }
 
 .imgProducto {
     width: 100%;
+    border-radius: 10%;
 }
 
 .h2Producto {
     font-weight: bold;
     color: #202020;
-    height: 2%;
+    height: 6%;
     font-size: 150%;
 }
 
@@ -697,7 +718,38 @@ audio {
 
 @media screen and (max-width: 1255px) {
     .producto {
-        width: 45%;
+        width: 43vw;
+    }
+
+    .filtros-productos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+        padding-top: 1vw;
+        background-color: #d5040462;
+        color: #000000;
+    }
+
+    .form-inline {
+        /* display: inline!important; */
+        width: 90vw!important;
+        font-size: medium!important;
+    }
+
+    .form-inline-text {
+        /* display: inline!important; */
+        width: 90vw!important;
+        text-align: center!important;
+        font-size: large!important;
+    }
+
+    .h2Producto {
+        font-weight: bold;
+        color: #202020;
+        height: 5%;
+        font-size: 150%;
     }
 
     .form {
@@ -780,7 +832,26 @@ audio {
 
 @media screen and (max-width: 630px) {
     .producto {
-        width: 90%;
+        width: 90vw;
+    }
+
+    .form-inline {
+        display: inline-block!important;
+        width: 90vw!important;
+        font-size: medium!important;
+    }
+
+    .form-inline-text {
+        display: inline-block!important;
+        text-align: center!important;
+        width: -3vw!important;
+    }
+
+    .h2Producto {
+        font-weight: bold;
+        color: #202020;
+        height: 3%;
+        font-size: 150%;
     }
 
     .form {

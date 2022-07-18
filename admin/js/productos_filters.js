@@ -40,8 +40,8 @@ const app = new Vue({
                 })
             },
             filtrarAhora() {
-                const url = 'https://pc-componentes.herokuapp.com/productos/filtros?categoria=' + this.categoria + '&filtrar=' + this.filtrar + '&orden=' + this.orden;
-                // const url = 'http://127.0.0.1:5000/productos/filtros?categoria=' + this.categoria + '&filtrar=' + this.filtrar + '&orden=' + this.orden;
+                // const url = 'https://pc-componentes.herokuapp.com/productos/filtros?categoria=' + this.categoria + '&filtrar=' + this.filtrar + '&orden=' + this.orden;
+                const url = 'http://127.0.0.1:5000/productos/filtros?categoria=' + this.categoria + '&filtrar=' + this.filtrar + '&orden=' + this.orden;
                
                 var options = {
                     method: 'GET',

@@ -69,64 +69,75 @@ def delete_producto(id):
 
 
 @app.route('/productos/filtros', methods=['GET'])
-def get_ProductosFiltrados(): # filtrar por categoria, nombre, precio, stock, descuento ordenar por precio nombre
+def get_ProductosFiltrados():  # filtros
+
     categoria = request.args.get('categoria')
     filtrar = request.args.get('filtrar')
     orden = request.args.get('orden')
-    if categoria == "":
-        categoria = None
-    if filtrar == "":
-        filtrar = None
-    if orden == "":
-        orden = 'DESC'
-    
-    if categoria is not None:
-        if filtrar == 'precio':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(asc(Producto.precio)).all()
-            else:
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(desc(Producto.precio)).all()
-        elif filtrar == 'nombre':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(asc(Producto.nombre)).all()
-            else:
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(desc(Producto.nombre)).all()
-        elif filtrar == 'stock':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(asc(Producto.stock)).all()
-            else:
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(desc(Producto.stock)).all()
-        elif filtrar == 'descuento':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(asc(Producto.descuento)).all()
-            else:
-                productos_filtrados = Producto.query.filter_by(categoria=categoria).order_by(desc(Producto.descuento)).all()
-    elif filtrar is not None:
-        if filtrar == 'precio':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.order_by(asc(Producto.precio)).all()
-            else:
-                productos_filtrados = Producto.query.order_by(desc(Producto.precio)).all()
-        elif filtrar == 'nombre':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.order_by(asc(Producto.nombre)).all()
-            else:
-                productos_filtrados = Producto.query.order_by(desc(Producto.nombre)).all()
-        elif filtrar == 'stock':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.order_by(asc(Producto.stock)).all()
-            else:
-                productos_filtrados = Producto.query.order_by(desc(Producto.stock)).all()
-        elif filtrar == 'descuento':
-            if orden == 'ASC':
-                productos_filtrados = Producto.query.order_by(asc(Producto.descuento)).all()
-            else:
-                productos_filtrados = Producto.query.order_by(desc(Producto.descuento)).all()
+
+    if categoria == "" or categoria == None:
+        categoria = 'Ninguna'
+    if filtrar == "" or filtrar == None:
+        filtrar = 'Ninguno'
+    if orden == "" or orden == None:
+        orden = 'Ninguno'
+
+    # si no se filtra nada, se muestran todos los productos
+    if categoria == 'Ninguna' and filtrar == 'Ninguno' and orden == 'Ninguno':
+        productos_filtrados = Producto.query.all()
+
+    # si solo se categoriza, se muestran los productos de esa categoria
+    elif categoria != 'Ninguna' and filtrar == 'Ninguno' and orden == 'Ninguno':
+        productos_filtrados = Producto.query.filter_by(
+            categoria=categoria).all()
+
+    # si solo filtra, se muestran los productos que contengan ese filtro de manera ascendente
+    elif categoria == 'Ninguna' and filtrar != 'Ninguno' and orden == 'Ninguno':
+        productos_filtrados = Producto.query.order_by(asc(filtrar)).all()
+
+    # si solo se ordena, se muestran los productos ordenados por precio
+    elif categoria == 'Ninguna' and filtrar == 'Ninguno' and orden != 'Ninguno':
+        if orden == 'ASC':
+            productos_filtrados = Producto.query.order_by(
+                asc(Producto.precio)).all()
+        else:
+            productos_filtrados = Producto.query.order_by(
+                desc(Producto.precio)).all()
+
+    # si se categoriza, filtra y se ordena, se muestran los productos de esa categoria que contengan ese filtro y ordenados por precio
+    elif categoria != 'Ninguna' and filtrar != 'Ninguno' and orden != 'Ninguno':
+        if orden == 'ASC':
+            productos_filtrados = Producto.query.filter_by(
+                categoria=categoria).order_by(asc(filtrar)).all()
+        else:
+            productos_filtrados = Producto.query.filter_by(
+                categoria=categoria).order_by(desc(filtrar)).all()
+
+    # si se filtra y se ordena, se muestran los productos que contengan ese filtro y ordenados por el filtro
+    elif categoria == 'Ninguna' and filtrar != 'Ninguno' and orden != 'Ninguno':  # si se filtra y se ordena
+        if orden == 'ASC':
+            productos_filtrados = Producto.query.order_by(asc(filtrar)).all()
+        else:
+            productos_filtrados = Producto.query.order_by(desc(filtrar)).all()
+
+    # si se categoriza y se ordena, se muestran los productos de esa categoria ordenados por el precio
+    elif categoria != 'Ninguna' and filtrar == 'Ninguno' and orden != 'Ninguno':
+        if orden == 'ASC':
+            productos_filtrados = Producto.query.filter_by(
+                categoria=categoria).order_by(asc(Producto.precio)).all()
+        else:
+            productos_filtrados = Producto.query.filter_by(
+                categoria=categoria).order_by(desc(Producto.precio)).all()
+
+    # si se categoriza y se filtra, se muestran los productos de esa categoria
+    elif categoria != 'Ninguna' and filtrar != 'Ninguno' and orden == 'Ninguno':
+        productos_filtrados = Producto.query.filter_by(
+            categoria=categoria).all()
+
+    # sino, se muestran todos los productos
     else:
         productos_filtrados = Producto.query.all()
-    result = productos_schema.dump(productos_filtrados)
-    #productos_filtrados = Producto.query.filter(categoria=request.args.get('categoria'), filtrar=request.args.get('filtrar')).order_by(request.args.get('orden'))
-    #productos_filtrados = Producto.query.filter(categoria=request.args.get('categoria')).order_by(request.args.get('orden'))
 
-    #result = productos_schema.dump(productos_filtrados)
-    return jsonify(result)
+    resultado = productos_schema.dump(productos_filtrados)
+
+    return jsonify(resultado)

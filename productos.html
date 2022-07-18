@@ -47,16 +47,14 @@
             <br>
 
                 <div id="app">
-                    <div style="padding: 0vw 20vw;">
+                    <div class="filtros-productos">
                         <!-- <form class="formulario-filtro" action="http://127.0.0.1:5000/productos/filtros" id="filtros"> -->
-                            <label class="form-label form-inline" for="categoria">Categoría</label>
+                            <label class="form-label form-inline-text" for="categoria">Categoría:</label>
                             <select class="form-control form-inline" id="categoria" name="categoria" v-model="categoria">
                                 <option value="">Todas</option>
-                                <!-- <option value="1">Celulares</option>
-                                <option value="2">Accesorios</option> -->
                                 <option v-for="categoria in categorias" :value="categoria.id">{{categoria.descripcion}}</option>
                             </select>
-                            <label class="form-label form-inline" for="filtrar">Filtrar:</label>
+                            <label class="form-label form-inline-text" for="filtrar">Filtrar:</label>
                             <select class="form-control input-filtro form-inline" name="filtrar" id="filtrar" v-model="filtrar">
                                 <option value="" disabled="" selected="">Filtrar por...</option>
                                 <option value="nombre">Nombre</option>
@@ -64,7 +62,7 @@
                                 <option value="stock">Stock</option>
                                 <option value="descuento">Descuento</option>
                             </select>
-                            <label class="form-label form-inline" for="orden">Ordenar:</label>
+                            <label class="form-label form-inline-text" for="orden">Ordenar:</label>
                             <select class="form-control input-filtro form-inline" name="orden" id="orden" v-model="orden">
                                 <option value="" disabled="" selected="">Ordenar...</option>
                                 <option value="DESC">Mayor a menor</option>
@@ -81,7 +79,7 @@
                             <hr>
                             <img class="imgProducto" :src="producto.imagen" alt="">
                             <hr>
-                            <p class="pProductos">{{producto.descripcion}}</p>
+                            <p class="pProductos">{{producto.descripcion.substring(0,90)+"..."}}</p>
                             <hr>
                             <p class="precioProductos">Precio: ${{new Intl.NumberFormat('es-AR').format(producto.precio)}}</p>
                             <a href="./productos.html" class="botonComprar">COMPRAR</a>

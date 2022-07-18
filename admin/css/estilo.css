@@ -258,9 +258,13 @@ input[type=submit]:hover {
   padding: 2%;
   margin: 1% 2%;
 }
+
 .admin_producto {
-  width: 150px;
-  height: 150px;
+  border-radius: 20%;
+  background-color: #a0a001;
+  padding: 2%;
+  margin: 1% 2%;
+  max-width: 100%;
 }
 
 .datos_productos_admin {
