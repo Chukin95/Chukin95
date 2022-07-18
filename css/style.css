@@ -483,6 +483,10 @@ audio {
     box-sizing: border-box;
 }
 
+.btn-sm {
+    width: 10%;
+}
+
 .imgProducto {
     width: 100%;
     border-radius: 10%;
@@ -745,6 +749,10 @@ audio {
         font-size: large!important;
     }
 
+    .btn-sm {
+        width: 20%;
+    }
+
     .h2Producto {
         font-weight: bold;
         color: #202020;
@@ -852,6 +860,10 @@ audio {
         color: #202020;
         height: 6%;
         font-size: 150%;
+    }
+
+    .btn-sm {
+        width: 30%;
     }
 
     .form {
