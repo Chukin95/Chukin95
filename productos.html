@@ -45,7 +45,8 @@
             <h1 class="animate__animated animate__flipInY">PRODUCTOS:</h1>
             
             <br>
-
+            
+            
 
                 <!-- <div id="app">
                     <section v-for="producto in productos">
@@ -64,6 +65,32 @@
                 </div> -->
 
                 <div id="app">
+                    <div style="padding: 0vw 20vw;">
+                        <!-- <form class="formulario-filtro" action="http://127.0.0.1:5000/productos/filtros" id="filtros"> -->
+                            <label for="categoria">Categoría</label>
+                            <select class="form-control" id="categoria" name="categoria" v-model="categoria">
+                                <option value="">Todas</option>
+                                <!-- <option value="1">Celulares</option>
+                                <option value="2">Accesorios</option> -->
+                                <option v-for="categoria in categorias" :value="categoria.id">{{categoria.descripcion}}</option>
+                            </select>
+                            <select class="form-control input-filtro" name="filtrar" id="filtrar" v-model="filtrar">
+                                <option value="" disabled="" selected="">Filtrar por...</option>
+                                <option value="nombre">Nombre</option>
+                                <option value="precio">Precio</option>
+                                <option value="stock">Stock</option>
+                                <option value="descuento">Descuento</option>
+                            </select>
+                            <select class="form-control input-filtro" name="orden" id="orden" v-model="orden">
+                                <option value="" disabled="" selected="">Ordenar...</option>
+                                <option value="DESC">Mayor a menor</option>
+                                <option value="ASC">Menor a mayor</option>
+                            </select>
+                            <!-- <input class="boton boton-crear" type="submit" value="filtrar"> -->
+                            <button class="btn-lg btn-primary" value="filtros" @click="filtrarAhora" >Filtrar</button>
+                            <br>
+                        <!-- </form> -->
+                    </div>
                     <section class="contenedor flex">
                         <div v-for="producto in productos" class="producto animate__animated animate__bounceIn">
                             <h2 class="h2Producto">{{producto.nombre}}</h2>
@@ -85,7 +112,8 @@
     <script src="./js/whatsapp.js"></script>
 
     <script src="./admin/js/index.js"></script>
-    <script src="./admin/js/productos_main.js"></script>
+    <!-- <script src="./admin/js/productos_main.js"></script> -->
+    <script src="./admin/js/productos_filters.js"></script>
     <script src="./js/main.js"></script>
 
 </body>
