@@ -13,6 +13,7 @@ const app = new Vue({
         errored: false,
         loading: true
     },
+    
     created() {
         var url = 'https://pc-componentes.herokuapp.com/productos'+id  //localhost:5000/produtos/2
         var urlCategoria = 'https://pc-componentes.herokuapp.com/categorias'
